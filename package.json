@@ -1,0 +1,22 @@
+{
+  "name": "ratenect-frontend",
+  "version": "1.0.0",
+  "description": "This is a test commit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ankur-Khandelwal/ratenect-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ankur-Khandelwal/ratenect-frontend/issues"
+  },
+  "homepage": "https://github.com/Ankur-Khandelwal/ratenect-frontend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
