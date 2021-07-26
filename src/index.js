@@ -5,6 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import NgoSignup from "./pages/NgoSignup/ngoSignup";
 
+//This is the main function
 function Main() {
   return (
     <Router>
