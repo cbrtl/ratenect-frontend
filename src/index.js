@@ -1,9 +1,9 @@
-import App from "./pages/Homepage";
+import App from "./pages/Homepage/homepage";
 import Account from "./pages/Account";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom";
-import NgoSignup from "./pages/NgoSignup/ngoSignup";
+// import NgoSignup from "./pages/NgoSignup/ngoSignup";
 
 //This is the main function
 function Main() {
@@ -19,7 +19,7 @@ function Main() {
           <Account />
         </Route>
         <Route path="/ngoSignup">
-          <NgoSignup />
+          {/* <NgoSignup /> */}
         </Route>
       </Switch>
     </Router>
