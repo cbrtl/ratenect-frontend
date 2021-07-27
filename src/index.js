@@ -1,4 +1,4 @@
-import App from "./pages/Homepage/homepage";
+import Homepage from "./pages/Homepage/homepage";
 import Account from "./pages/Account";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from "react";
@@ -12,15 +12,9 @@ function Main() {
       <Link to="/"></Link>
       {/* <Link to="/account"></Link> */}
       <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route path="/account">
-          <Account />
-        </Route>
-        <Route path="/ngoSignup">
-          {/* <NgoSignup /> */}
-        </Route>
+        <Route exact path="/"> <Homepage /> </Route>
+        <Route path="/account"> <Account /> </Route>
+        <Route path="/ngoSignup">{/* <NgoSignup /> */} </Route>
       </Switch>
     </Router>
   );
