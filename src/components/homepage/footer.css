@@ -1,0 +1,15 @@
+.main-footer {
+  background-color: black;
+  padding-top: 2rem;
+  color: white;
+}
+
+.column {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+}
