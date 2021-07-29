@@ -20,24 +20,12 @@ Read more details about the project inspiration [here](https://cbrtl.github.io/p
 ## Run Project
 
 - Clone the repository
-- `cd` into the `ratenect-backend` folder
+- `cd` into the `ratenect-frontend` folder
 - switch to dev branch `git checkout dev`
 - run `npm install`
-- run `npm install jsonwebtoken --save`
-- create a `.env` file in the root directory and paste the following data into it:
-
-  ```
-  PORT = 3000
-  db_user = ******
-  db_pwd = ******
-  db_name = ******
-  secret_key = ******
-  ```
-
-  **NOTE**: Use your own MongoDB Atlas for storing the data (suggested), else ask the project maintainers on [Discord](https://discord.com/invite/3qry3u569v) `#ratenect` channel for the DB connection credentials.
-
+- then you can start working on the issue given
 - save the changes and run `npm start`
-- visit http://localhost:3000/ in your browser
+- visit http://localhost:3000/ in your browser, to check your changes.
 
 ## Contributing:
 
