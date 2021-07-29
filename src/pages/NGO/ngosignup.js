@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Account(){
+export default function ngoSignup(){
     return(
         <div>
-            Accounts
+            <h1>NGO Sign Up Page</h1>
         </div>
     )
 }
