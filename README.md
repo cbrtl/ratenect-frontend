@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Ratenect
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Ratenect Banner](images/banner.png)
+<br><br>
+Ratenect is a web platfrom with a two-way rating system where the users can find NGOs near them and can apply to volunteer in-person for their public activities. Based on their experience the NGOs can rate the volunteers and vice-versa.
+<br><br>
+Read more details about the project inspiration [here](https://cbrtl.github.io/posts/ratenect/).
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- **Frontend**: React
+- **Backend**: Node js, Express js
+- **Database**: MongoDB (Atlas)
 
-### `npm start`
+## Plan
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **UI**: [Figma](https://www.figma.com/file/W7mgBV73gMNZRFjuEewyDN/ratenect?node-id=0%3A1)
+- **Database Schema**: [dbdiagram](https://dbdiagram.io/d/60e010ba0b1d8a6d39650956)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run Project
 
-### `npm test`
+- Clone the repository
+- `cd` into the `ratenect-frontend` folder
+- switch to dev branch `git checkout dev`
+- run `npm install`
+- then you can start working on the issue given
+- save the changes and run `npm start`
+- visit http://localhost:3000/ in your browser, to check your changes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.  Go through the [Contributing Guidelines](https://github.com/cbrtl/ratenect-backend/blob/dev/CONTRIBUTING.md).
+2.  Fork this repository and then clone the forked repository to your system.
+3.  Create a new branch `<your-github-username>`.
+4.  Switch to your new branch and add your github username to the `contributors.md` file.
+5.  Commit the changes in your local system and `git push` to the upstream.
+6.  Come back to ratenect's github page and make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) from `you:<your-branch>` to `cbrtl:dev`.
