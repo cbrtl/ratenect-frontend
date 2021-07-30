@@ -13,7 +13,10 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  
 }
+
+
 
 .nav-buttons {
   width: 50%;
@@ -23,14 +26,14 @@ nav {
   list-style: none;
 }
 
-.login {
+/* .login {
   border-radius: 25px;
   background: #ffffff;
   padding: 0.5rem;
   height: 40px;
   width: 130px;
   border: none;
-}
+} */
 
 .signup {
   border-radius: 25px;
