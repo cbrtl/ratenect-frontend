@@ -14,3 +14,31 @@ nav {
   align-items: center;
   list-style: none;
 }
+
+.nav-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.login {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 0.5rem;
+  height: 40px;
+  width: 130px;
+  border: none;
+}
+
+.signup {
+  border-radius: 25px;
+  background: #52ab98;
+  padding: 0.5rem;
+  height: 40px;
+  width: 130px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}

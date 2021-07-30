@@ -9,7 +9,10 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
-    "components": "^0.1.0",
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 38a27bdb4b6c6afe5964466a0c0f121b673449b4
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
