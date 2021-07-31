@@ -1,105 +1,109 @@
 .login {
-    border-radius: 25px;
-    background: #ffffff;
-    padding: 0.5rem;
-    height: 40px;
-    width: 130px;
-    border: none;
-  }
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 0.5rem;
+  height: 40px;
+  width: 130px;
+  border: none;
+}
 
-  .button {
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-  }
+.button {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
 
-  .titles {
-    position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-  }
+.titles {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
 
-  .modal_box {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    /* background-color: #5C9CAD; */
-    border-radius: 5px;
-  }
+.modal_box {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* background-color: #5C9CAD; */
+  border-radius: 5px;
+}
 
-  .header{
-    /* color: #ffffff; */
-    background-color:#5C9CAD ;
-    /* margin: 0%; */
-  }
+.header {
+  /* color: #ffffff; */
+  background-color: #5c9cad;
+  /* margin: 0%; */
+}
 
-  .body{
-    background-color:#5C9CAD ;
-    /* margin: 0%; */
-  }
+.body {
+  background-color: #5c9cad;
+  /* margin: 0%; */
+}
 
-  .modal_footer{
-    background-color:#5C9CAD ;
-    box-align : center;
-    /* margin: 0%; */
-  }
+.modal_footer {
+  background-color: #5c9cad;
+  box-align: center;
+  /* margin: 0%; */
+}
 
-  .getstarted {
-    box-align : center;
-    border-radius: 25px;
-    background: #ffffff;
-    padding: 0.5rem;
-    height: 40px;
-    width: 130px;
-    border: none;
-  }
+.getstarted {
+  box-align: center;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 0.5rem;
+  height: 40px;
+  width: 130px;
+  border: none;
+}
 
-  .email {
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 18.5px;
-    margin: unset;
-    border-style: none;
-    color: white;
-  }
+.email {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 18.5px;
+  margin: unset;
+  border-style: none;
+  color: white;
+}
 
-  .pass {
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 18.5px;
-    margin: unset;
-    border-style: none;
-    color: white;
-  }
+.pass {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 18.5px;
+  margin: unset;
+  border-style: none;
+  color: white;
+}
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgb(255, 255, 255);
-    /* opacity: 1; Firefox */
-  }
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  /* opacity: 1; Firefox */
+}
 
-  input {
-    /* -webkit-writing-mode: horizontal-tb !important; */
-    text-rendering: auto;
-    color:  white;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    /* background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59)); */
-    /* -webkit-rtl-ordering: logical; */
-    cursor: text;
-    margin: 0em;
-    font: 400 13.3333px Arial;
-    padding: 1px 2px;
-    border-width: 2px;
-    border-style: hidden;
-    /* border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+input {
+  /* -webkit-writing-mode: horizontal-tb !important; */
+  text-rendering: auto;
+  color: white;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  /* background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59)); */
+  /* -webkit-rtl-ordering: logical; */
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: hidden;
+  /* border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial; */
 }
 
+*:focus {
+  outline: none;
+}
