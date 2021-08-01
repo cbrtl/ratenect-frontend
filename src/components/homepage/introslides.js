@@ -1,14 +1,16 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel,Container } from 'react-bootstrap';
 import image1 from '../asset/images/1.jpg';
 import image2 from '../asset/images/2.jpg';
 import image3 from '../asset/images/3.jpg';
 import image4 from '../asset/images/4.jpg';
 import './introslides.css';
 
+
 export default function Slider(){
     return (
-      <Carousel>
+      
+      <Carousel >
       <Carousel.Item interval={2000}>
         <img
           className="d-block w-100"
@@ -54,5 +56,6 @@ export default function Slider(){
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+  
     )
 }
