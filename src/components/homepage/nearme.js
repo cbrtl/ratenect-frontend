@@ -14,7 +14,7 @@ export default function Nearme(){
             </p>
           </div>
 
-          <div class="row my-5 g-3 align-items-center justify-content-center">
+          <div class="row my-5 align-items-center justify-content-center">
             <div class="col-8 col-lg-4 col-xl-3">
               <div class="card border-0">
                 <div class="card-body text-center py-4">
@@ -22,7 +22,7 @@ export default function Nearme(){
 
                   <p class="lead card-subtitle">Pune, Maharashtra</p>
                   
-                  <img className="d-block w-100" src={Maps} alt="First slide" />
+                  <img className="d-block w-100 bg-light" src={Maps} alt="First slide" />
                   <a href="#" class="btn btn-outline-primary btn-lg mt-3">
                   Volunteer
                   </a>
@@ -30,8 +30,8 @@ export default function Nearme(){
               </div>
             </div>
 
-            <div class="col-9 col-lg-4">
-              <div class="card border-primary border-2">
+            <div class="col-9 col-lg-4 bg-light">
+              <div class="card border-primary border-2 px-3">
                 <div class="card-header text-center text-primary">
                   Most Visited
                 </div>

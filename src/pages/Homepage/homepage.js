@@ -1,13 +1,11 @@
 import React from 'react';
 import Nav from '../../components/homepage/navbar';
 import Slider from '../../components/homepage/introslides';
-<<<<<<< HEAD
-import Search from '../../components/homepage/search'
-import Nearme from '../../components/homepage/nearme';
-import Recommend from '../../components/homepage/recommend';
-=======
 // import Modal from '../../components/homepage/modal';
->>>>>>> 029c1979ee0104cee809dc86128ff34689975180
+import Search from '../../components/homepage/search';
+import Nearme from '../../components/homepage/nearme'
+import Recommend from '../../components/homepage/recommend'
+import Participate from '../../components/homepage/participated';
 import Footer from '../../components/homepage/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
@@ -43,9 +41,11 @@ const home = () => {
   return(
     <>
     <Slider />
+    <Participate />
     <Search />
     <Nearme />
     <Recommend/>
+    
     </>
   )
   
