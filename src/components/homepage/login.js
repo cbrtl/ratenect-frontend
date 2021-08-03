@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import './login.css';
 
-export default function Login_mod(){
+export default function LoginMod(){
 
   const [show, setShow] = React.useState(false);
   const handleClose = () => setShow(false);
