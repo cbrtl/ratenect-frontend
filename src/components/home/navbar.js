@@ -1,7 +1,7 @@
 import React from 'react';
 import './navbar.css';
 import {Link} from 'react-router-dom';
-import Login_mod from './login.js'
+import Login from './login.js'
 
 export default function Nav(){
     return (
@@ -30,7 +30,7 @@ export default function Nav(){
           <Link to='/user-signup' style={{ color: '#fff', textDecoration: 'none' }}>
             <li className='signup'>SIGN UP</li>
           </Link> */}
-          <Login_mod />
+          <Login />
         </ul>
       </nav>
         <label for='nav-toggle' class='nav-toggle-label'><span></span>
