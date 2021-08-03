@@ -1,8 +1,7 @@
 import React from 'react';
-import Nav from '../../components/homepage/navbar';
-import Slider from '../../components/homepage/introslides';
-// import Modal from '../../components/homepage/modal';
-import Footer from '../../components/homepage/footer';
+import Nav from '../../components/home/navbar';
+import Slider from '../../components/home/introslides';
+import Footer from '../../components/home/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
 import Blog from './blog';
