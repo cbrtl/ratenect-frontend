@@ -1,13 +1,10 @@
 import React from 'react';
 import Nav from '../../components/homepage/navbar';
 import Slider from '../../components/homepage/introslides';
-<<<<<<< HEAD
 import Search from '../../components/homepage/search'
 import Nearme from '../../components/homepage/nearme';
 import Recommend from '../../components/homepage/recommend';
-=======
 // import Modal from '../../components/homepage/modal';
->>>>>>> 029c1979ee0104cee809dc86128ff34689975180
 import Footer from '../../components/homepage/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
