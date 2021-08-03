@@ -1,11 +1,7 @@
 import React from 'react';
 import './navbar.css';
 import {Link} from 'react-router-dom';
-<<<<<<< HEAD:src/components/homepage/navbar.js
 import LoginMod from './login.js'
-=======
-import Login from './login.js'
->>>>>>> 603d1959d9cc310a647679148c108636f01a3a49:src/components/home/navbar.js
 
 export default function Nav(){
     return (
@@ -34,11 +30,7 @@ export default function Nav(){
           <Link to='/user-signup' style={{ color: '#fff', textDecoration: 'none' }}>
             <li className='signup'>SIGN UP</li>
           </Link> */}
-<<<<<<< HEAD:src/components/homepage/navbar.js
           <LoginMod />
-=======
-          <Login />
->>>>>>> 603d1959d9cc310a647679148c108636f01a3a49:src/components/home/navbar.js
         </ul>
       </nav>
         <label for='nav-toggle' class='nav-toggle-label'><span></span>
