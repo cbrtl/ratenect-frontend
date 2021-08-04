@@ -1,18 +1,18 @@
 import React from 'react';
 import './navbar.css';
-import {Link} from 'react-router-dom';
-import LoginMod from './login.js'
+import { Link } from 'react-router-dom';
+import Login from './login.js'
 
-export default function Nav(){
-    return (
-      <header>
-      <Link to='/' style={{ color: '#000', textDecoration: 'none'}}>
-            <h3 className="logo">LOGO</h3>
+export default function Nav() {
+  return (
+    <header>
+      <Link to='/' style={{ color: '#000', textDecoration: 'none' }}>
+        <h3 className="logo">LOGO</h3>
       </Link>
-      <input type='checkbox' id='nav-toggle' className='nav-toggle'/>
+      <input type='checkbox' id='nav-toggle' className='nav-toggle' />
       <nav>
         <ul>
-          <Link to='/volunteer' style={{ color: '#fff', textDecoration: 'none'}}>
+          <Link to='/volunteer' style={{ color: '#fff', textDecoration: 'none' }}>
             <li>VOLUNTEER</li>
           </Link>
           <Link to='/ngo' style={{ color: '#fff', textDecoration: 'none' }}>
@@ -30,12 +30,12 @@ export default function Nav(){
           <Link to='/user-signup' style={{ color: '#fff', textDecoration: 'none' }}>
             <li className='signup'>SIGN UP</li>
           </Link> */}
-          <LoginMod />
+          <Login />
         </ul>
       </nav>
-        <label for='nav-toggle' class='nav-toggle-label'><span></span>
-        </label>
-      
+      <label for='nav-toggle' class='nav-toggle-label'><span></span>
+      </label>
+
     </header>
-    )
-} 
+  )
+}
