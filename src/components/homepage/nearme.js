@@ -30,7 +30,7 @@ function Nearme(){
   return (
     <section className="section">
       <div className="title">
-        <h1>Near by NGO's</h1>
+        <h1>Nearby NGO's</h1>
         <h3>Choose a near by NGO to volunteer</h3>
       </div>
       <div className="section-center">
@@ -49,7 +49,7 @@ function Nearme(){
               <p className="title">{title}</p>
               {/* <button className="volunteer"> Volunteer</button> */}
               <img src={image} alt="" className="ngo-img" />
-              <p>Click below to know more</p>
+              <p>Click here to know more</p>
               {/* <button type="button">Volunteer</button> */}
               <Button variant="success" href={link}>Volunteer</Button>{' '}
             </article>
