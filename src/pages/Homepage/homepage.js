@@ -1,11 +1,10 @@
 import React from 'react';
 import Nav from '../../components/homepage/navbar';
 import Slider from '../../components/homepage/introslides';
+import Search from '../../components/homepage/search'
+import Nearme from '../../components/homepage/nearme';
+import Recommend from '../../components/homepage/recommend';
 // import Modal from '../../components/homepage/modal';
-import Search from '../../components/homepage/search';
-import Nearme from '../../components/homepage/nearme'
-import Recommend from '../../components/homepage/recommend'
-import Participate from '../../components/homepage/participated';
 import Footer from '../../components/homepage/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
@@ -41,11 +40,9 @@ const home = () => {
   return(
     <>
     <Slider />
-    <Participate />
     <Search />
     <Nearme />
     <Recommend/>
-    
     </>
   )
   

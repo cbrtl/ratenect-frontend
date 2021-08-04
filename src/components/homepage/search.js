@@ -73,12 +73,12 @@ export default function Search() {
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
           {" "}
-          Search{" "}
+          h{" "}
         </button>
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
           {" "}
-          Search{" "}
+          hiii{" "}
         </button>
 
         <button type="button" className="btn btn-outline-dark col-2 m-1">
