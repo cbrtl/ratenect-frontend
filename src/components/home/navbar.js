@@ -2,6 +2,7 @@ import React from 'react';
 import './navbar.css';
 import { Link } from 'react-router-dom';
 import Login from './login.js'
+import Signup from './signup';
 
 export default function Nav() {
   return (
@@ -31,6 +32,8 @@ export default function Nav() {
             <li className='signup'>SIGN UP</li>
           </Link> */}
           <Login />
+          <Signup />
+          
         </ul>
       </nav>
       <label for='nav-toggle' class='nav-toggle-label'><span></span>
