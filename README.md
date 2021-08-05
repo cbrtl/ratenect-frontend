@@ -29,7 +29,7 @@ Read more details about the project inspiration [here](https://cbrtl.github.io/p
 
 ## Contributing:
 
-1.  Go through the [Contributing Guidelines](https://github.com/cbrtl/ratenect-backend/blob/dev/CONTRIBUTING.md).
+1.  Go through the [Contributing Guidelines](./CONTRIBUTING.md).
 2.  Fork this repository and then clone the forked repository to your system.
 3.  Create a new branch `<your-github-username>`.
 4.  Switch to your new branch and add your github username to the `contributors.md` file.

@@ -1,11 +1,7 @@
 import React from 'react';
-import Nav from '../../components/homepage/navbar';
-import Slider from '../../components/homepage/introslides';
-import Search from '../../components/homepage/search'
-import Nearme from '../../components/homepage/nearme';
-import Recommend from '../../components/homepage/recommend';
-// import Modal from '../../components/homepage/modal';
-import Footer from '../../components/homepage/footer';
+import Nav from '../../components/home/navbar';
+import Slider from '../../components/home/introslides';
+import Footer from '../../components/home/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
 import Blog from './blog';
@@ -38,13 +34,8 @@ export default function Home(){
 
 const home = () => {
   return(
-    <>
     <Slider />
-    <Search />
-    <Nearme />
-    <Recommend/>
-    </>
+
   )
   
 }
-
