@@ -1,0 +1,108 @@
+.signup-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px rgba();
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+}
+
+.signup-popup .h2 {
+  text-align: center;
+  color: #fff;
+  margin: 10px 0px 20px 0;
+  font-size: 25px;
+}
+
+/* .Signuppopup .form-element {
+  margin: 15px 0px;
+} */
+
+::placeholder { 
+  font: size 14px;
+  color: #fff;
+}
+
+/* .signup-popup .form-element .label {
+  font: size 14px;
+  color: #222;
+} */
+
+.signup-popup .form-element input[type="text"],
+.signup-popup .form-element input[type="password"] {
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 18.5px;
+  font: size 14px;
+  color: #fff;
+  border-style: unset;
+}
+
+.signup-popup .form-element input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.signup-popup .form-element button {
+  width: 50%;
+  height: 45px;
+  border: none;
+  outline: none;
+  font: size 16px;
+  background: #fff;
+  color: #5C9CAD;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.signup button{
+  width: 90px;
+  height: 45px;
+  border: none;
+  outline: none;
+  font: size 16px;
+  background: #5C9CAD;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
+
+.signup-popup .form-element .first-element{
+  width: 100%;
+  /* vertical-align:middle; */
+  display: flex;
+  float: left;
+} 
+
+.switch{
+  align-self: center;
+}
+
+.switch button{
+  width: 90px;
+  height: 45px;
+  /* border: none;
+  outline: none; */
+  font: size 16px;
+  background: #6db5c9;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  float: left;
+  text-align: center;
+  
+}
+
+.switch button:active{
+  background: #2B6777;
+}
+
