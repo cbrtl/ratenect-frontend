@@ -11,29 +11,43 @@
 
 .popup .h2 {
   text-align: center;
-  color: #222;
+  color: #fff;
   margin: 10px 0px 20px 0;
   font-size: 25px;
 }
 
 .popup .form-element {
   margin: 15px 0px;
+  
 }
 
-.popup .form-element .label {
+.login-popup .main .button{
+  width: 331.38px;
+  height: 69.76px;
+  border: none;
+  outline: none;
+  font: size 16px;
+  background: #fff;
+  color: #5C9CAD;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+::placeholder { 
   font: size 14px;
-  color: #222;
+  color: #fff;
 }
 
 .popup .form-element input[type="text"],
 .popup .form-element input[type="password"] {
   margin-top: 5px;
-  display: block;
   width: 100%;
   padding: 10px;
   outline: none;
-  border: 1px solid #aaaaaa;
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 18.5px;
+  font: size 14px;
+  color: #fff;
 }
 
 .popup .form-element input[type="checkbox"] {
@@ -41,13 +55,13 @@
 }
 
 .popup .form-element button {
-  width: 100%;
-  height: 40px;
+  width: 331.38px;
+  height: 69.76px;
   border: none;
   outline: none;
   font: size 16px;
-  background: #222;
-  color: #f5f5f5;
+  background: #fff;
+  color: #5C9CAD;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -58,47 +72,5 @@
   font-size: 15px;
   text-decoration: none;
   font-weight: 600;
+  color: #2B6777;
 }
-
-/*.login {
-  border-radius: 25px;
-  background: #ffffff;
-  padding: 0.5rem;
-  height: 40px;
-  width: 130px;
-  border: none;
-}
-
-.button {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-}
-
-.titles {
-  position: absolute;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-}
-
-.modal_box {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  
-  border-radius: 5px;
-}
-
-.header {
-  
-  background-color: #5c9cad;
-  
-}
-
-.body {
-  background-color: #5c9cad;
-  /* margin: 0%; */

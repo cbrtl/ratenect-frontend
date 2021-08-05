@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import Modal from 'react-bootstrap/Modal';
 import './login.css';
-import Popup from './popup.js';
+import Loginpopup from './loginpopup.js';
 
 export default function Login() {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -11,23 +11,21 @@ export default function Login() {
         <button onClick={() => setButtonPopup(true)}>Login</button>
       </main>
 
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+      <Loginpopup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <form>
           <h2>Log in</h2>
           <div className="form-element">
-            <label>Email</label>
-            <input type="text" name="Enter email" />
+            <input type="text" name="Enter email" placeholder="Email" />
           </div>
           <div className="form-element">
-            <label>Password</label>
-            <input type="password" name="Enter password" />
+            <input type="password" name="Enter password" placeholder="Password"/>
           </div>
           <div className="form-element">
             <input type="checkbox" />
             <label>Remember me</label>
           </div>
           <div className="form-element">
-            <button>Sign in</button>
+            <button>Get Started!</button>
           </div>
           <div className="form-element">
             <a href="#">Forgot password?</a>
@@ -36,7 +34,7 @@ export default function Login() {
 
         </form>
 
-      </Popup>
+      </Loginpopup>
     </div>
 
   );
