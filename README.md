@@ -23,9 +23,8 @@ Read more details about the project inspiration [here](https://cbrtl.github.io/p
 - `cd` into the `ratenect-frontend` folder
 - switch to dev branch `git checkout dev`
 - run `npm install`
-- then you can start working on the issue given
-- save the changes and run `npm start`
-- visit http://localhost:3000/ in your browser, to check your changes.
+- run `npm start`
+- visit http://localhost:3000/ in your browser to check the website.
 
 ## Contributing:
 
