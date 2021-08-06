@@ -71,7 +71,7 @@ nav li:hover {
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content: "";
+  content: '';
   position: absolute;
 }
 
@@ -134,7 +134,7 @@ nav li:hover {
   }
 
   nav li::before {
-    content: "";
+    content: '';
     display: block;
     height: 5px;
     background: #459180;
