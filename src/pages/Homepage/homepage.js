@@ -1,6 +1,10 @@
 import React from 'react';
 import Nav from '../../components/home/navbar';
 import Slider from '../../components/home/introslides';
+import Search from '../../components/home/search'
+import Nearme from '../../components/home/nearme';
+import Recommend from '../../components/home/recommend';
+// import Modal from '../../components/homepage/modal';
 import Footer from '../../components/home/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
@@ -34,8 +38,14 @@ export default function Home(){
 
 const home = () => {
   return(
+    <>
     <Slider />
-
+   
+    <Search />
+    <Nearme />
+    <Recommend/>
+    
+    </>
   )
   
 }
