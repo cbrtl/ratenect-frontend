@@ -1,12 +1,11 @@
 import React from 'react';
 import Nav from '../../components/homepage/navbar';
 import Slider from '../../components/homepage/introslides';
+import Search from '../../components/home/search'
+import Nearme from '../../components/home/nearme';
+import Recommend from '../../components/home/recommend';
 // import Modal from '../../components/homepage/modal';
-import Search from '../../components/homepage/search';
-import Nearme from '../../components/homepage/nearme'
-import Recommend from '../../components/homepage/recommend'
-import Participate from '../../components/homepage/participated';
-import Footer from '../../components/homepage/footer';
+import Footer from '../../components/home/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
 import Blog from './blog';
