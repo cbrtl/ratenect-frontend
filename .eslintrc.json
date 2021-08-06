@@ -21,6 +21,10 @@
         "prettier"
     ],
     "rules": {
-        
+        "react/button-has-type": "off",
+        "jsx-a11y/label-has-associated-control": "warn",
+        "react/prop-types": "off",
+        "jsx-a11y/control-has-associated-label": "warn",
+        "camelcase": 2
     }
 }
