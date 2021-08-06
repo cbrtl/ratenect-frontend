@@ -1,6 +1,6 @@
-import React from "react";
-import blog from "../asset/images/blog.jpg";
-import profile from "../asset/images/profile.png";
+import React from 'react';
+import blog from '../asset/images/blog.jpg';
+import profile from '../asset/images/profile.png';
 
 export default function Recommend() {
   return (
@@ -107,15 +107,17 @@ export default function Recommend() {
 
     <div className="container-fluid bg-light">
       <div className="text-center">
-          <h2>Recommended Blogs</h2>
-          <p className="lead text-muted">Blogs you would love</p>
-        </div>
+        <h2>Recommended Blogs</h2>
+        <p className="lead text-muted">Blogs you would love</p>
+      </div>
       <div className="row">
         <div className="col mt-1 mt-lg-3">
           <div className="row ">
             {/* <div className="col bg-secondary"> */}
             {/* <div className="card-profile-image"> */}
-            <a href="/" className="col  ms-1 ms-lg-5"> {/* Link will be changed */}
+            <a href="/" className="col  ms-1 ms-lg-5">
+              {' '}
+              {/* Link will be changed */}
               <img src={profile} alt="" className="rounded-circle " />
             </a>
             {/* </div> */}
@@ -146,7 +148,10 @@ export default function Recommend() {
             <button type="button" className="btn btn-outline-dark col-3 me-2">
               Health
             </button>
-            <button type="button" className="btn button button5 btn-outline-dark col-3 ">
+            <button
+              type="button"
+              className="btn button button5 btn-outline-dark col-3 "
+            >
               online
             </button>
           </div>

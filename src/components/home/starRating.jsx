@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import './starRating.css';
 
@@ -22,17 +22,16 @@ const Rating = () => {
             <FaStar
               classname="star"
               cursor="pointer"
-              color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
+              color={ratingValue <= (hover || rating) ? '#ffc107' : '#e4e5e9'}
               size={20}
               onMouseEnter={() => setHover(ratingValue)}
               onMouseLeave={() => setHover(null)}
             />
           </label>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
 export default Rating;
-

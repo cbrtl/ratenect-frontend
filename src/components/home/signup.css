@@ -20,7 +20,7 @@
   margin: 15px 0px;
 } */
 
-::placeholder { 
+::placeholder {
   font: size 14px;
   color: #fff;
 }
@@ -30,8 +30,8 @@
   color: #222;
 } */
 
-.signup-popup .form-element input[type="text"],
-.signup-popup .form-element input[type="password"] {
+.signup-popup .form-element input[type='text'],
+.signup-popup .form-element input[type='password'] {
   margin: 5px;
   width: 100%;
   padding: 10px;
@@ -43,7 +43,7 @@
   border-style: unset;
 }
 
-.signup-popup .form-element input[type="checkbox"] {
+.signup-popup .form-element input[type='checkbox'] {
   margin-right: 5px;
 }
 
@@ -54,18 +54,18 @@
   outline: none;
   font: size 16px;
   background: #fff;
-  color: #5C9CAD;
+  color: #5c9cad;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.signup button{
+.signup button {
   width: 90px;
   height: 45px;
   border: none;
   outline: none;
   font: size 16px;
-  background: #5C9CAD;
+  background: #5c9cad;
   color: #fff;
   border-radius: 10px;
   cursor: pointer;
@@ -73,18 +73,18 @@
   margin: 10px;
 }
 
-.signup-popup .form-element .first-element{
+.signup-popup .form-element .first-element {
   width: 100%;
   /* vertical-align:middle; */
   display: flex;
   float: left;
-} 
+}
 
-.switch{
+.switch {
   align-self: center;
 }
 
-.switch button{
+.switch button {
   width: 90px;
   height: 45px;
   /* border: none;
@@ -99,10 +99,8 @@
   display: flex;
   float: left;
   text-align: center;
-  
 }
 
-.switch button:active{
-  background: #2B6777;
+.switch button:active {
+  background: #2b6777;
 }
-

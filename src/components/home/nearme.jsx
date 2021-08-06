@@ -1,32 +1,30 @@
-import React , {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-import {Button} from 'react-bootstrap'
-import data from './data'
-import './nearme.css'
+import { Button } from 'react-bootstrap';
+import data from './data';
+import './nearme.css';
 
-
-
-function Nearme(){
+function Nearme() {
   // const [ngos, setNgos] = useState(data);
   const ngos = data;
   const [index, setIndex] = useState(2);
 
-  useEffect(()=>{
-    const lastIndex = ngos.length -1 ;
-    if(index< 0){
-      setIndex(lastIndex);}
-    if(index > lastIndex){
-      setIndex(0)
+  useEffect(() => {
+    const lastIndex = ngos.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
     }
-    
-  },[index,ngos])
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, ngos]);
 
-  useEffect(()=>{
-    const slider = setInterval(()=>{
-      setIndex(index+1)
-    },3000);
-    return (()=>clearInterval(slider))
-  },[index]);
+  useEffect(() => {
+    const slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+    return () => clearInterval(slider);
+  }, [index]);
 
   return (
     <section className="section">
@@ -35,16 +33,18 @@ function Nearme(){
         <h3>Choose a near by NGO to volunteer</h3>
       </div>
       <div className="section-center">
-        {ngos.map((ngo,ngoIndex)=>{
-          const{id,name,image,title,link}=ngo;
+        {ngos.map((ngo, ngoIndex) => {
+          const { id, name, image, title, link } = ngo;
           let position = 'nextSlide';
-          if(ngoIndex === index)
-            position= "activeSlide";
-          
-          if(ngoIndex === index-1 || (index===0 && ngoIndex === ngos.length - 1))
-            position= "lastSLide";
+          if (ngoIndex === index) position = 'activeSlide';
 
-          return(
+          if (
+            ngoIndex === index - 1 ||
+            (index === 0 && ngoIndex === ngos.length - 1)
+          )
+            position = 'lastSLide';
+
+          return (
             <article className={position} key={id}>
               <h4>{name}</h4>
               <p className="title">{title}</p>
@@ -52,33 +52,31 @@ function Nearme(){
               <img src={image} alt="" className="ngo-img" />
               <p>Click here to know more</p>
               {/* <button type="button">Volunteer</button> */}
-              <Button variant="success" href={link}>Volunteer</Button>{' '}
+              <Button variant="success" href={link}>
+                Volunteer
+              </Button>{' '}
             </article>
-            
-          )
+          );
         })}
-        <button className="prev" onClick={()=>setIndex(index - 1)}><FiChevronLeft /></button>
-        <button className="next" onClick={()=>setIndex(index + 1)}><FiChevronRight/></button>
+        <button className="prev" onClick={() => setIndex(index - 1)}>
+          <FiChevronLeft />
+        </button>
+        <button className="next" onClick={() => setIndex(index + 1)}>
+          <FiChevronRight />
+        </button>
       </div>
     </section>
-  )
+  );
 }
 
 export default Nearme;
 
-
-
-
-
-
-
 // import React from 'react'
 // import Maps from "../asset/images/map.jpg"
 
-
 // export default function Nearme(){
 //     return (
-        
+
 //       <section id="pricing" class="bg-light mt-5">
 //         <div class="container-lg">
 //           <div class="text-center">
@@ -95,7 +93,7 @@ export default Nearme;
 //                   <h4 class="card-title">Clean up foundation</h4>
 
 //                   <p class="lead card-subtitle">Pune, Maharashtra</p>
-                  
+
 //                   <img className="d-block w-100 bg-light" src={Maps} alt="First slide" />
 //                   <a href="#" class="btn btn-outline-primary btn-lg mt-3">
 //                   Volunteer

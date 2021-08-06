@@ -1,7 +1,5 @@
 import React from 'react';
 
-export default function Tag(){
-  return(
-    <h3>tag</h3>
-  )  
+export default function Tag() {
+  return <h3>tag</h3>;
 }

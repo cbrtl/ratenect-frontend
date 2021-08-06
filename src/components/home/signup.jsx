@@ -13,10 +13,10 @@ export default function Signup() {
 
       <Signuppopup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <h2>Sign Up</h2>
-          <div className="switch">
-              <button>NGO</button>
-              <button>Volunteer</button>
-          </div>
+        <div className="switch">
+          <button>NGO</button>
+          <button>Volunteer</button>
+        </div>
         <form>
           <div className="form-element">
             <div className="first-element">
@@ -28,25 +28,25 @@ export default function Signup() {
             <input type="text" name="Enter email" placeholder="Email" />
           </div>
           <div className="form-element">
-            <input type="password" name="Enter password" placeholder="Create Password"/>
+            <input
+              type="password"
+              name="Enter password"
+              placeholder="Create Password"
+            />
           </div>
           <div className="form-element">
-            <input type="password" name="Re enter password" placeholder="Confirm Password"/>
+            <input
+              type="password"
+              name="Re enter password"
+              placeholder="Confirm Password"
+            />
           </div>
-          
+
           <div className="form-element">
             <button>Submit</button>
           </div>
-          
-
-
         </form>
-
       </Signuppopup>
     </div>
-
   );
 }
-
-
-

@@ -21,27 +21,27 @@
   
 } */
 
-.login button{
+.login button {
   width: 90px;
   height: 45px;
   border: none;
   outline: none;
   font: size 16px;
   background: #fff;
-  color: #5C9CAD;
+  color: #5c9cad;
   border-radius: 10px;
   cursor: pointer;
   padding: 10px;
   margin: 10px;
 }
 
-::placeholder { 
+::placeholder {
   font: size 14px;
   color: #fff;
 }
 
-.login-popup .form-element input[type="text"],
-.login-popup .form-element input[type="password"] {
+.login-popup .form-element input[type='text'],
+.login-popup .form-element input[type='password'] {
   margin: 5px;
   width: 100%;
   padding: 10px;
@@ -53,7 +53,7 @@
   border-style: unset;
 }
 
-.login-popup .form-element input[type="checkbox"] {
+.login-popup .form-element input[type='checkbox'] {
   margin-right: 5px;
 }
 
@@ -64,7 +64,7 @@
   outline: none;
   font: size 16px;
   background: #fff;
-  color: #5C9CAD;
+  color: #5c9cad;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -75,5 +75,5 @@
   font-size: 15px;
   text-decoration: none;
   font-weight: 600;
-  color: #2B6777;
+  color: #2b6777;
 }

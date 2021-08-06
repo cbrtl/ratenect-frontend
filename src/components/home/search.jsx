@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 // import Navbar from "react-bootstrap/Navbar";
 // import Nav from "react-bootstrap/Nav";
 // import NavDropdown from "react-bootstrap/NavDropdown";
@@ -14,7 +14,6 @@ import React from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Search() {
-
   return (
     // <Container className=" my-3 justify-content-around align-items-center">
     // <Navbar  expand="lg" >
@@ -49,41 +48,41 @@ export default function Search() {
     <div className="container mt-5">
       <div className="row">
         <div className="col-3 me-3 mt-1">
-        <form>
-          <div className="input-group ">
-            <span className="input-group-text">
-               <i className="bi bi-search"/>
-            </span>
-            <input
-              type="text"
-              className="form-control"
-              id="search"
-              placeholder="search"
-            />
-          </div>
+          <form>
+            <div className="input-group ">
+              <span className="input-group-text">
+                <i className="bi bi-search" />
+              </span>
+              <input
+                type="text"
+                className="form-control"
+                id="search"
+                placeholder="search"
+              />
+            </div>
           </form>
         </div>
 
         {/* <button type="button" className="btn  btn-outline-dark col-3 me-3 "> Search </button> */}
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
-          {" "}
-          Search{" "}
+          {' '}
+          Search{' '}
         </button>
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
-          {" "}
-          h{" "}
+          {' '}
+          h{' '}
         </button>
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
-          {" "}
-          hiii{" "}
+          {' '}
+          hiii{' '}
         </button>
 
         <button type="button" className="btn btn-outline-dark col-2 m-1">
-          {" "}
-          Search{" "}
+          {' '}
+          Search{' '}
         </button>
       </div>
     </div>

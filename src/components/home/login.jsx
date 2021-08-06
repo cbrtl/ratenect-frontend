@@ -18,7 +18,11 @@ export default function Login() {
             <input type="text" name="Enter email" placeholder="Email" />
           </div>
           <div className="form-element">
-            <input type="password" name="Enter password" placeholder="Password"/>
+            <input
+              type="password"
+              name="Enter password"
+              placeholder="Password"
+            />
           </div>
           <div className="form-element">
             <input type="checkbox" />
@@ -30,40 +34,8 @@ export default function Login() {
           <div className="form-element">
             <a href="/">Forgot password?</a> {/* Link will be changed */}
           </div>
-
-
         </form>
-
       </Loginpopup>
     </div>
-
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

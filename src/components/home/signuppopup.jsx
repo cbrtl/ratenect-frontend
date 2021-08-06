@@ -1,14 +1,18 @@
-import React from 'react'
-import './signuppopup.css'
+import React from 'react';
+import './signuppopup.css';
 
 export default function Signuppopup(props) {
-  const {trigger, setTrigger, children} = props;
-  return (trigger) ? (
-    <div className='signup-popup'>
+  const { trigger, setTrigger, children } = props;
+  return trigger ? (
+    <div className="signup-popup">
       <div className="inner-popup">
-        <button className="close-btn" onClick={() => setTrigger(false)}>X</button>
+        <button className="close-btn" onClick={() => setTrigger(false)}>
+          X
+        </button>
         {children}
       </div>
     </div>
-  ) : "";
+  ) : (
+    ''
+  );
 }
