@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from '../../components/homepage/navbar';
-import Slider from '../../components/homepage/introslides';
+import Nav from '../../components/home/navbar';
+import Slider from '../../components/home/introslides';
 import Search from '../../components/home/search'
 import Nearme from '../../components/home/nearme';
 import Recommend from '../../components/home/recommend';
@@ -40,7 +40,7 @@ const home = () => {
   return(
     <>
     <Slider />
-    <Participate />
+   
     <Search />
     <Nearme />
     <Recommend/>
