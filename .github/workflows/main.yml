@@ -27,11 +27,14 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-
-      - name: Build
-        run: npm build
         
-      - name: Linter check
-        run: npx eslint . && npx prettier --check .
+      - name: Install eslint globally
+        run: npm i -g eslint
+        
+      - name: Eslint check
+        run:  eslint src/**
+      
+      - name: Prettier check
+        run: npx prettier --check .
 
       
