@@ -30,6 +30,6 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
       - run: npm i -g eslint
-      - run: node_modules/eslint/bin/eslint.js .
+      - run: npx eslint .
       - run: npx prettier --check .
-      - run: eslint src/** && npx prettier --check
+
