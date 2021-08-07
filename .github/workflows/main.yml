@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v2.4.0
 
       - name: Cache node modules
+        id: cacheStep
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
@@ -29,6 +30,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install Dependencies
+        if: steps.cacheStep.output.cache-hit != 'true'
         run: npm install
 
       - name: Eslint check
