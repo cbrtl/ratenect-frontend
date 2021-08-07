@@ -28,13 +28,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
         
-      - name: Install eslint globally
-        run: npm i -g eslint
-        
       - name: Eslint check
-        run:  eslint src/**
+        run:  eslint src/** /* --max-warnings 10
       
       - name: Prettier check
         run: npx prettier --check .
+        
+      - name: Run app
+        run: npm start
 
       
