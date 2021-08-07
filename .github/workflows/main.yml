@@ -35,6 +35,3 @@ jobs:
 
       - name: Prettier check
         run: npx prettier --check .
-
-      - name: Run app
-        run: npm start
