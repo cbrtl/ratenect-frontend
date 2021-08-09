@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 // import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 import './signup.css';
 import Signuppopup from './signuppopup';
 
+
 export default function Signup() {
-  const [buttonPopup, setButtonPopup] = useState(false);
+  const [buttonPopup, setButtonPopup] = useState(false)
+  const [userForm, setUserForm] = useState(false)
+
   return (
     <div className="signup">
       <main>
@@ -14,15 +18,17 @@ export default function Signup() {
       <Signuppopup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <h2>Sign Up</h2>
         <div className="switch">
-          <button>NGO</button>
-          <button>Volunteer</button>
+          <button onClick={() => setUserForm(false)}>NGO</button>
+          <button onClick={() => setUserForm(true)}>User</button>
         </div>
         <form>
           <div className="form-element">
             <div className="first-element">
-              <input type="text" name="First name" placeholder="First Name" />
-              <input type="text" name="Last name" placeholder="Last Name" />
-            </div>
+              {
+              userForm ? <div> <input type="text" name="First name" placeholder="First Name" />
+              <input type="text" name="Last name" placeholder="Last Name" /> </div>  : <input type="text" name="Name" placeholder="Name" />
+              }
+              </div>
           </div>
           <div className="form-element">
             <input type="text" name="Enter email" placeholder="Email" />
@@ -43,7 +49,7 @@ export default function Signup() {
           </div>
 
           <div className="form-element">
-            <button>Submit</button>
+            <Link to="/ngo/Home"><button>Submit</button></Link>
           </div>
         </form>
       </Signuppopup>

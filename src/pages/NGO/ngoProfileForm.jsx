@@ -1,9 +1,9 @@
 import React from 'react';
 // import './ngoForm.css';
 
-export default function ngoProfileForm() {
+export default function NgoProfileForm() {
   return (
-    <div>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh' }}>
       <h1>NGO Profile Form Page</h1>
       <h2>Sign Up</h2>
         <div className="switch">

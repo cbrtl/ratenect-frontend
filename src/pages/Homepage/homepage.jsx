@@ -5,7 +5,10 @@ import Slider from '../../components/home/introslides';
 import Search from '../../components/home/search';
 import Nearme from '../../components/home/nearme';
 import Recommend from '../../components/home/recommend';
+
 import ngoProfileForm from '../NGO/ngoProfileForm';
+import NgoHome from '../NGO/ngoHome';
+// import Modal from '../../components/homepage/modal';
 import Footer from '../../components/home/footer';
 import Vol from './volunteer';
 import ngo from './ngo';
@@ -34,7 +37,7 @@ export default function Home() {
           <Route path="/ngo" component={ngo} />
           <Route path="/blog" component={Blog} />
           <Route path="/donation" component={Donation} />
-          {/* <Route path="/user-signup" component={UserSignup}/> */}
+          <Route path="/ngo/Home" component={NgoHome}/>
         </Switch>
       </div>
       
