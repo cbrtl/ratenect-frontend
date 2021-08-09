@@ -5,6 +5,8 @@ import Slider from '../../components/home/introslides';
 import Search from '../../components/home/search';
 import Nearme from '../../components/home/nearme';
 import Recommend from '../../components/home/recommend';
+
+import ngoProfileForm from '../NGO/ngoProfileForm';
 import NgoHome from '../NGO/ngoHome';
 // import Modal from '../../components/homepage/modal';
 import Footer from '../../components/home/footer';
@@ -20,6 +22,7 @@ const home = () => (
     <Search />
     <Nearme />
     <Recommend />
+    <ngoProfileForm />
   </>
 );
 
@@ -37,6 +40,7 @@ export default function Home() {
           <Route path="/ngo/Home" component={NgoHome}/>
         </Switch>
       </div>
+      
 
       <Footer />
     </Router>
