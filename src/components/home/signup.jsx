@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import { React, useState } from 'react';
 // import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 import './signup.css';
 import Signuppopup from './signuppopup';
 
-
 export default function Signup() {
-  const [buttonPopup, setButtonPopup] = useState(false)
-  const [userForm, setUserForm] = useState(false)
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [userForm, setUserForm] = useState(false);
 
   return (
     <div className="signup">
@@ -24,11 +23,20 @@ export default function Signup() {
         <form>
           <div className="form-element">
             <div className="first-element">
-              {
-              userForm ? <div> <input type="text" name="First name" placeholder="First Name" />
-              <input type="text" name="Last name" placeholder="Last Name" /> </div>  : <input type="text" name="Name" placeholder="Name" />
-              }
-              </div>
+              {userForm ? (
+                <div>
+                  {' '}
+                  <input
+                    type="text"
+                    name="First name"
+                    placeholder="First Name"
+                  />
+                  <input type="text" name="Last name" placeholder="Last Name" />{' '}
+                </div>
+              ) : (
+                <input type="text" name="Name" placeholder="Name" />
+              )}
+            </div>
           </div>
           <div className="form-element">
             <input type="text" name="Enter email" placeholder="Email" />
@@ -49,7 +57,9 @@ export default function Signup() {
           </div>
 
           <div className="form-element">
-            <Link to="/ngo/Home"><button>Submit</button></Link>
+            <Link to="/ngo/Home">
+              <button>Submit</button>
+            </Link>
           </div>
         </form>
       </Signuppopup>
