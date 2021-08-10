@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Homepage from './pages/Homepage/homepage';
+import NgoHome from './pages/NGO/ngoHome';
 
 function Main() {
   return (
@@ -11,6 +12,10 @@ function Main() {
         <Route exact path="/">
           {' '}
           <Homepage />{' '}
+        </Route>
+        <Route exact path="/ngo/home">
+          {' '}
+          <NgoHome />{' '}
         </Route>
       </Switch>
     </Router>
