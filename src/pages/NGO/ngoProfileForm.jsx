@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from '../../components/ImageSlider/ImgSlider';
 // import './ngoForm.css';
 
 export default function NgoProfileForm() {
@@ -74,6 +75,7 @@ export default function NgoProfileForm() {
           <button>Submit</button>
         </div>
       </form>
+      <Slider />
     </div>
   );
 }
