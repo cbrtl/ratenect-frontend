@@ -28,29 +28,28 @@ export default function Slider() {
 
   return (
     <div className="slider-container">
-      {dataSlider.map((obj, index) => 
-          <div
-            key={obj.id}
-            className={
-              slideIndex === index + 1 ? 'slide active-animation' : 'slide'
-            }
-          >
-            <img src = {`src/asset/images/${index + 1}.jpg`} alt= "ankur" />
-            <p>{obj.title}</p>
-          </div>
-        )
-      }
-       
-       
+      {dataSlider.map((obj, index) => (
+        <div
+          key={obj.id}
+          className={
+            slideIndex === index + 1 ? 'slide active-animation' : 'slide'
+          }
+        >
+          <img src={`src/asset/images/${index + 1}.jpg`} alt="ankur" />
+          <p>{obj.title}</p>
+        </div>
+      ))}
 
-      <BtnSlider moveSlide={nextSlide} direction='next' />
-      <BtnSlider moveSlide={prevSlide} direction='prev' />
+      <BtnSlider moveSlide={nextSlide} direction="next" />
+      <BtnSlider moveSlide={prevSlide} direction="prev" />
 
       <div className="dots-container">
         {Array.from({ length: 4 }).map((item, index) => (
           <div>
-            <button onClick={() => moveDot(index + 1)}
-            className={slideIndex === index + 1 ? 'dot active' : 'dot'}/>
+            <button
+              onClick={() => moveDot(index + 1)}
+              className={slideIndex === index + 1 ? 'dot active' : 'dot'}
+            />
           </div>
         ))}
       </div>
