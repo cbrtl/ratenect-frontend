@@ -36,6 +36,7 @@ export default function Slider() {
           }
         >
           <img src={obj.image} alt="Introduction" />
+
           <p>{obj.title}</p>
         </div>
       ))}
