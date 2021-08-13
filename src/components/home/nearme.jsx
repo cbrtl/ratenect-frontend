@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { Button } from 'react-bootstrap';
 import data from './data';
-import './nearme.css';
+import './css/nearme.css';
 
 function Nearme() {
   // const [ngos, setNgos] = useState(data);
