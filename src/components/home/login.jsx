@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import Modal from 'react-bootstrap/Modal';
-import './login.css';
+import './css/login.css';
 import Loginpopup from './loginpopup';
 
 export default function Login() {

@@ -13,7 +13,7 @@ function Main() {
           {' '}
           <Homepage />{' '}
         </Route>
-        <Route exact path="/ngo/home">
+        <Route path="/ngo/home">
           {' '}
           <NgoHome />{' '}
         </Route>

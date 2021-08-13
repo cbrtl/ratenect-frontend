@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 // import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
-import './signup.css';
+import './css/signup.css';
 import Signuppopup from './signuppopup';
 
 export default function Signup() {
@@ -25,13 +25,12 @@ export default function Signup() {
             <div className="first-element">
               {userForm ? (
                 <div>
-                  {' '}
                   <input
                     type="text"
                     name="First name"
                     placeholder="First Name"
                   />
-                  <input type="text" name="Last name" placeholder="Last Name" />{' '}
+                  <input type="text" name="Last name" placeholder="Last Name" />
                 </div>
               ) : (
                 <input type="text" name="Name" placeholder="Name" />
