@@ -1,13 +1,12 @@
 import React from 'react';
-import './css/navbar.css';
+import './NgoNavbar.css';
 import { Link } from 'react-router-dom';
-import Login from './login';
-import Signup from './signup';
+import { CgProfile } from 'react-icons/cg';
 
 export default function Nav() {
   return (
     <header>
-      <Link to="/" style={{ color: '#000', textDecoration: 'none' }}>
+      <Link to="/ngo/home" style={{ color: '#000', textDecoration: 'none' }}>
         <h3 className="logo">LOGO</h3>
       </Link>
       <input type="checkbox" id="nav-toggle" className="nav-toggle" />
@@ -31,14 +30,15 @@ export default function Nav() {
           >
             <li>DONATION</li>
           </Link>
-          {/* <Link to='/login' style={{ color: '#fff', textDecoration: 'none' }}>
-            <li className='login'>LOGIN</li>
+          <Link
+            to="/ngo/profile"
+            style={{ color: '#fff', textDecoration: 'none' }}
+          >
+            <CgProfile size={30} />
           </Link>
-          <Link to='/user-signup' style={{ color: '#fff', textDecoration: 'none' }}>
-            <li className='signup'>SIGN UP</li>
-          </Link> */}
-          <Login />
-          <Signup />
+          <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>
+            <button>Logout</button>
+          </Link>
         </ul>
       </nav>
       <label htmlFor="nav-toggle" className="nav-toggle-label" />
