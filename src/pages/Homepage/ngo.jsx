@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ngo() {
+export default function Ngo() {
   return (
     <div
       style={{

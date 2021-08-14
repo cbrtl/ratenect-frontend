@@ -7,11 +7,11 @@ import Nearme from '../../components/home/nearme';
 import Recommend from '../../components/home/recommend';
 import Footer from '../../components/home/footer';
 import Vol from './volunteer';
-import ngo from './ngo';
+import Ngo from './ngo';
 import Blog from './blog';
 import Donation from './donate';
 
-const home = () => (
+const Home = () => (
   <div style={{ marginTop: '100px' }}>
     <IntroSlider />
     <Search />
@@ -20,15 +20,15 @@ const home = () => (
   </div>
 );
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <Router>
       <div>
         <Nav />
         <Switch>
-          <Route path="/" exact component={home} />
+          <Route path="/" exact component={Home} />
           <Route path="/volunteer" component={Vol} />
-          <Route path="/ngo" component={ngo} />
+          <Route path="/ngo" component={Ngo} />
           <Route path="/blog" component={Blog} />
           <Route path="/donation" component={Donation} />
         </Switch>

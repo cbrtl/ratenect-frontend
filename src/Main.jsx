@@ -10,12 +10,10 @@ function Main() {
 
       <Switch>
         <Route exact path="/">
-          {' '}
-          <Homepage />{' '}
+          <Homepage />
         </Route>
-        <Route path="/ngo/home">
-          {' '}
-          <NgoHome />{' '}
+        <Route exact path="/ngo/home">
+          <NgoHome />
         </Route>
       </Switch>
     </Router>
