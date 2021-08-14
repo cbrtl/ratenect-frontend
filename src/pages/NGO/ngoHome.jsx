@@ -6,7 +6,7 @@ export default function NgoHome() {
   return (
     <Router>
       <Switch>
-        <Route path="/ngo/Profile" exact component={NgoProfileForm} />
+        <Route path="/ngo/profile" exact component={NgoProfileForm} />
         <div
           style={{
             display: 'flex',

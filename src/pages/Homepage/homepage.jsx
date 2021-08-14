@@ -11,12 +11,12 @@ import Recommend from '../../components/home/recommend';
 // import Modal from '../../components/homepage/modal';
 import Footer from '../../components/home/footer';
 import Vol from './volunteer';
-import ngo from './ngo';
+import Ngo from './ngo';
 import Blog from './blog';
 import Donation from './donate';
 // import Login from './login';
 
-const home = () => (
+const Home = () => (
   <>
     <Slider />
     <Search />
@@ -26,15 +26,15 @@ const home = () => (
   </>
 );
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <Router>
       <div>
         <Nav />
         <Switch>
-          <Route path="/" exact component={home} />
+          <Route path="/" exact component={Home} />
           <Route path="/volunteer" component={Vol} />
-          <Route path="/ngo" component={ngo} />
+          <Route path="/ngo" component={Ngo} />
           <Route path="/blog" component={Blog} />
           <Route path="/donation" component={Donation} />
           {/* <Route path="/ngo/Home" component={NgoHome} /> */}
