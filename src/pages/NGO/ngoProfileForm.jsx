@@ -79,7 +79,6 @@ export default function NgoProfileForm() {
       </form>
 
       <Slider />
-
     </div>
   );
 }

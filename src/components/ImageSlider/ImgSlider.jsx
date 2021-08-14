@@ -35,7 +35,8 @@ export default function Slider() {
             slideIndex === index + 1 ? 'slide active-animation' : 'slide'
           }
         >
-          <img src={`src/asset/images/${index + 1}.jpg`} alt="ankur" />
+          <img src={obj.image} alt="Introduction" />
+
           <p>{obj.title}</p>
         </div>
       ))}

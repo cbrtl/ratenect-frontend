@@ -1,5 +1,5 @@
 import React from 'react';
-import './loginpopup.css';
+import './css/loginpopup.css';
 
 export default function Loginpopup(props) {
   const { trigger, setTrigger, children } = props;

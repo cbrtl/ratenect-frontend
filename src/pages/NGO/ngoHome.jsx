@@ -1,30 +1,31 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from '../Homepage/homepage';
 import NgoProfileForm from './ngoProfileForm';
+import NgoNavbar from '../../components/ngoComp/NgoNavbar';
+import Footer from '../../components/home/footer';
+import Nearme from '../../components/home/nearme';
+import Recommend from '../../components/home/recommend';
+
+const Ngohome = () => (
+  <div style={{ marginTop: '100px' }}>
+    <Nearme />
+    <Recommend />
+  </div>
+);
 
 export default function NgoHome() {
   return (
     <Router>
-      <Switch>
-        <Route path="/ngo/profile" exact component={NgoProfileForm} />
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '80vh',
-          }}
-        >
-          <div>
-            <Link to="/ngo/profile">
-              <button>Go To NGO PROFILE page</button>
-            </Link>
-          </div>
-          <div>
-            <h3>This is NGO Home Page</h3>
-          </div>
-        </div>
-      </Switch>
+      <div>
+        <NgoNavbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/ngo/home" exact component={Ngohome} />
+          <Route path="/ngo/profile" component={NgoProfileForm} />
+        </Switch>
+        <Footer />
+      </div>
     </Router>
   );
 }

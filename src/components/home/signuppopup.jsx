@@ -1,5 +1,5 @@
 import React from 'react';
-import './signuppopup.css';
+import './css/signuppopup.css';
 
 export default function Signuppopup(props) {
   const { trigger, setTrigger, children } = props;

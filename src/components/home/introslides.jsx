@@ -4,9 +4,9 @@ import image1 from '../asset/images/1.jpg';
 import image2 from '../asset/images/2.jpg';
 import image3 from '../asset/images/3.jpg';
 import image4 from '../asset/images/4.jpg';
-import './introslides.css';
+import './css/introslides.css';
 
-export default function Slider() {
+export default function IntroSlider() {
   return (
     <Carousel>
       <Carousel.Item interval={2000}>
