@@ -1,11 +1,11 @@
 .ngo-form {
-    position: relative;
-    align-self: center;
-    align-content: center;
-    display: 'flex';
-    justify-content: 'center';
-    align-items: 'center';
-    padding: 100px 300px;
+  position: relative;
+  align-self: center;
+  align-content: center;
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'center';
+  padding: 100px 300px;
 }
 .ngo-form-element input[type='text'],
 .ngo-form-element input[type='date'],
@@ -24,17 +24,17 @@
   left: 50%;
 }
 
-.ngo-form-element select{
-    margin: 5px;
-    width: 300px;
-    padding: 10px;
-    outline: none;
-    background:rgba(43, 103, 119, 1);
-    border-radius: 18.5px;
-    font-size: 16px;
-    color: #fff;
-    border-style: unset;
-    left: 50%; 
+.ngo-form-element select {
+  margin: 5px;
+  width: 300px;
+  padding: 10px;
+  outline: none;
+  background: rgba(43, 103, 119, 1);
+  border-radius: 18.5px;
+  font-size: 16px;
+  color: #fff;
+  border-style: unset;
+  left: 50%;
 }
 
 .ngo-form-element input[type='checkbox'] {
@@ -42,34 +42,34 @@
 }
 
 .ngo-form-element .rectangle {
-    background: rgba(235, 235, 235, 1);
-    width: 150px;
-    height: 180px;
-    text-align: center;
-    float:left;
-    margin-right: 45px;
-    margin-bottom: 20px;
-    /* left: 243px;
+  background: rgba(235, 235, 235, 1);
+  width: 150px;
+  height: 180px;
+  text-align: center;
+  float: left;
+  margin-right: 45px;
+  margin-bottom: 20px;
+  /* left: 243px;
     top: 1829px; */
 }
 
-.ngo-form-element textarea{
-    background-color: #f7f7f7;
+.ngo-form-element textarea {
+  background-color: #f7f7f7;
 }
 
 .ngo-form-element .rectangle button {
-    width: 50px;
-    height: 45px;
-    left: 50%;
-    font-size: 16px;
-    background: rgba(82, 171, 152, 1);
-    color: #fff;
-    border-radius: 45px;
-    cursor: pointer;
-    left: 500px;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
+  width: 50px;
+  height: 45px;
+  left: 50%;
+  font-size: 16px;
+  background: rgba(82, 171, 152, 1);
+  color: #fff;
+  border-radius: 45px;
+  cursor: pointer;
+  left: 500px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .ngo-form-element button {
@@ -91,14 +91,14 @@
 }
 
 .ngo-form-element input::placeholder {
-    font-size: 14px;
-    color: rgba(118, 107, 107, 1);
-  }
+  font-size: 14px;
+  color: rgba(118, 107, 107, 1);
+}
 .ngo-form-element input[type='date']::placeholder {
-    font-size: 14px;
-    color: rgba(118, 107, 107, 1);
-  }
+  font-size: 14px;
+  color: rgba(118, 107, 107, 1);
+}
 .ngo-form-element label {
-    font-size: 18px;
-    color: rgba(118, 107, 107, 1);
+  font-size: 18px;
+  color: rgba(118, 107, 107, 1);
 }

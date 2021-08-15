@@ -16,14 +16,10 @@
   font-size: 25px;
 }
 
-
-
 .placeholder {
   font: size 14px;
   color: #fff;
 }
-
-
 
 .signup-popup .form-element input[type='text'],
 .signup-popup .form-element input[type='password'] {
