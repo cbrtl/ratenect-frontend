@@ -16,19 +16,14 @@
   font-size: 25px;
 }
 
-/* .Signuppopup .form-element {
-  margin: 15px 0px;
-} */
 
-::placeholder {
+
+.placeholder {
   font: size 14px;
   color: #fff;
 }
 
-/* .signup-popup .form-element .label {
-  font: size 14px;
-  color: #222;
-} */
+
 
 .signup-popup .form-element input[type='text'],
 .signup-popup .form-element input[type='password'] {

@@ -2,79 +2,136 @@ import React from 'react';
 
 import Slider from '../../components/ImageSlider/ImgSlider';
 
-// import './ngoForm.css';
+ import './ngoForm.css';
 
 export default function NgoProfileForm() {
   return (
     <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '90vh',
-      }}
+      // style={{
+      //   display: 'flex',
+      //   justifyContent: 'center',
+      //   alignItems: 'center',
+      //   height: '90vh',
+      // }}
     >
-      <h1>NGO Profile Form Page</h1>
-      <h2>Sign Up</h2>
-      <div className="switch">
-        <button>NGO</button>
-        <button>Volunteer</button>
-      </div>
-      <form>
-        <div className="form-element">
-          {/* <label>Organisation Name</label> */}
+      <form className="ngo-form">
+        <div className="ngo-form-element">
+          <label>Organisation Name</label>
+          <br/>
           <input
             type="text"
             name="First name"
             placeholder="Organisation Name"
           />
         </div>
-        <div className="form-element">
-          {/* <label>Password</label> */}
+        <div className="ngo-form-element">
+          <label>Password</label>
+          <br/>
           <input
             type="password"
             name="Create password"
             placeholder="Create Password"
           />
         </div>
-        <div className="form-element">
-          {/* <label>Date of foundation</label> */}
+        <div className="ngo-form-element">
+          <label>Date of foundation</label>
+          <br/>
           <input
-            type="text"
+            type="date"
             name="Date of foundation"
             placeholder="Date of foundation"
           />
         </div>
-        <div className="form-element">
-          {/* <label>Mobile No.</label> */}
-          <input type="text" name="Mobile No." placeholder="Mobile No." />
+        <div className="ngo-form-element">
+          <label>Mobile No.</label>
+          <br/>
+          <input type="number" name="Mobile No." placeholder="Mobile No." />
         </div>
-        <div className="form-element">
-          {/* <label>Address</label> */}
+        <div className="ngo-form-element">
+          <label>Address</label>
+          <br/>
           <input type="text" name="Line 1" placeholder="Line 1" />
+          <br/>
           <input type="text" name="Line 2" placeholder="Line 2" />
+          <br/>
+          <select id="city" name="city" >
+          <option value="city">Select City</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+          </select>
+          <select id="state" name="state" >
+          <option value="state">Select state</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+          </select>
         </div>
-        <div className="form-element">
-          <div className="Founder">
-            <input type="text" name="First name" placeholder="First Name" />
-            <input type="text" name="Last name" placeholder="Last Name" />
+        <div className="ngo-form-element">
+          <label>Founder</label>
+          <br/>
+          <input type="text" name="First name" placeholder="First Name" />
+          <input type="text" name="Last name" placeholder="Last Name" />
+        </div>
+        <div className="ngo-form-element">
+          <label>Secratary</label>
+          <br/>
+          <input type="text" name="First name" placeholder="First Name" />
+          <input type="text" name="Last name" placeholder="Last Name" />
+        </div>
+        <div className="ngo-form-element">
+          <label>Finanace Trustee</label>
+          <br/>
+          <input type="text" name="First name" placeholder="First Name" />
+          <input type="text" name="Last name" placeholder="Last Name" />
+        </div>
+        <br/><br/>
+        <div className="ngo-form-element">
+          <div className="rectangle">
+            <label>Tax Exemption Certificate</label>
+            <br/>
+            <br/>
+            <button>upload</button>
           </div>
         </div>
-        <div className="form-element">
-          <div className="Secratary">
-            <input type="text" name="First name" placeholder="First Name" />
-            <input type="text" name="Last name" placeholder="Last Name" />
+        <div className="ngo-form-element">
+          <div className="rectangle">
+            <label>Registration Certificate </label>
+            <br/>
+            <br/>
+            <button>upload</button>
           </div>
         </div>
-        <div className="form-element">
-          <div className="Finanace Trustee">
-            <input type="text" name="First name" placeholder="First Name" />
-            <input type="text" name="Last name" placeholder="Last Name" />
+        <div className="ngo-form-element">
+          <div className="rectangle">
+            <label>Annual Report</label>
+            <br/>
+            <br/>
+            <br/>
+            <button>upload</button>
           </div>
         </div>
-
-        <div className="form-element">
-          <button>Submit</button>
+        <div className="ngo-form-element">
+          <div className="rectangle">
+            <label>Trust Deeds</label>
+            <br/>
+            <br/>
+            <br/>
+            <button>upload</button>
+          </div>
+        </div>
+        <div className="ngo-form-element">
+          <label>URL</label>
+          <br/>
+          <input type="url" name="url" placeholder="Website link" />
+        </div>
+        <br/>
+        <div className="ngo-form-element">
+          <label>About Us</label>
+          <br/>
+        <textarea rows="7" cols="80" name="about" />
+        </div>
+        <br/><br/>
+        <div className="ngo-form-element">
+          <button>Save Changes!</button>
         </div>
       </form>
 
