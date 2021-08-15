@@ -1,106 +1,104 @@
-.signup-popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 380px;
-  padding: 20px 30px;
-  box-shadow: 0 0 10px rgba();
-  background-color: rgb(255, 255, 255);
-  border-radius: 100px;
+.ngo-form {
+  position: relative;
+  align-self: center;
+  align-content: center;
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'center';
+  padding: 100px 300px;
 }
-
-.signup-popup .h2 {
-  text-align: center;
-  color: #fff;
-  margin: 10px 0px 20px 0;
-  font-size: 25px;
-}
-
-/* .Signuppopup .form-element {
-    margin: 15px 0px;
-  } */
-
-::placeholder {
-  font: size 14px;
-  color: #fff;
-}
-
-/* .signup-popup .form-element .label {
-    font: size 14px;
-    color: #222;
-  } */
-
-.signup-popup .form-element input[type='text'],
-.signup-popup .form-element input[type='password'] {
+.ngo-form-element input[type='text'],
+.ngo-form-element input[type='date'],
+.ngo-form-element input[type='number'],
+.ngo-form-element input[type='url'],
+.ngo-form-element input[type='password'] {
   margin: 5px;
-  width: 100%;
+  width: 400px;
   padding: 10px;
   outline: none;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(235, 235, 235, 1);
   border-radius: 18.5px;
-  font: size 14px;
-  color: #fff;
+  font-size: 16px;
+  color: #000;
   border-style: unset;
+  left: 50%;
 }
 
-.signup-popup .form-element input[type='checkbox'] {
+.ngo-form-element select {
+  margin: 5px;
+  width: 300px;
+  padding: 10px;
+  outline: none;
+  background: rgba(43, 103, 119, 1);
+  border-radius: 18.5px;
+  font-size: 16px;
+  color: #fff;
+  border-style: unset;
+  left: 50%;
+}
+
+.ngo-form-element input[type='checkbox'] {
   margin-right: 5px;
 }
 
-.signup-popup .form-element button {
-  width: 50%;
+.ngo-form-element .rectangle {
+  background: rgba(235, 235, 235, 1);
+  width: 150px;
+  height: 180px;
+  text-align: center;
+  float: left;
+  margin-right: 45px;
+  margin-bottom: 20px;
+  /* left: 243px;
+    top: 1829px; */
+}
+
+.ngo-form-element textarea {
+  background-color: #f7f7f7;
+}
+
+.ngo-form-element .rectangle button {
+  width: 50px;
   height: 45px;
-  border: none;
-  outline: none;
-  font: size 16px;
+  left: 50%;
+  font-size: 16px;
+  background: rgba(82, 171, 152, 1);
+  color: #fff;
+  border-radius: 45px;
+  cursor: pointer;
+  left: 500px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.ngo-form-element button {
+  width: 150px;
+  height: 45px;
+  left: 50%;
+  border-color: #5c9cad;
+  border-bottom: #5c9cad;
+  border-right: #5c9cad;
+  font-size: 16px;
   background: #fff;
   color: #5c9cad;
   border-radius: 10px;
   cursor: pointer;
-}
-
-.signup button {
-  width: 90px;
-  height: 45px;
-  border: none;
-  outline: none;
-  font: size 16px;
-  background: #5c9cad;
-  color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 10px;
-  margin: 10px;
-}
-
-.signup-popup .form-element .first-element {
-  width: 100%;
-  /* vertical-align:middle; */
-  display: flex;
-  float: left;
-}
-
-.switch {
-  align-self: center;
-}
-
-.switch button {
-  width: 90px;
-  height: 45px;
-  /* border: none;
-    outline: none; */
-  font: size 16px;
-  background: #6db5c9;
-  color: #fff;
-  border-radius: 20px;
-  cursor: pointer;
-  padding: 10px;
-  margin: 5px;
-  display: flex;
-  float: left;
+  left: 500px;
   text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
-.switch button:active {
-  background: #2b6777;
+.ngo-form-element input::placeholder {
+  font-size: 14px;
+  color: rgba(118, 107, 107, 1);
+}
+.ngo-form-element input[type='date']::placeholder {
+  font-size: 14px;
+  color: rgba(118, 107, 107, 1);
+}
+.ngo-form-element label {
+  font-size: 18px;
+  color: rgba(118, 107, 107, 1);
 }

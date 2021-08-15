@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 // import Modal from 'react-bootstrap/Modal';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './css/signup.css';
 import Signuppopup from './signuppopup';
@@ -7,6 +8,33 @@ import Signuppopup from './signuppopup';
 export default function Signup() {
   const [buttonPopup, setButtonPopup] = useState(false);
   const [userForm, setUserForm] = useState(false);
+
+  // STATES OF INPUT FIELDS
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [fullName, setFullName] = useState(''); // for NGOs
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  function submitSignUp() {
+    const name = userForm ? firstName + ' ' + lastName : fullName;
+    const data = { name, email, password, confirmPassword };
+    const url = userForm ? '/api/usersignup' : '/api/ngosignup';
+    axios.post(url, data).then((res) => {
+      console.log(res);
+      if (res.status === 201) {
+        setButtonPopup(false);
+        setUserForm(false);
+        setFirstName('');
+        setLastName('');
+        setFullName('');
+        setEmail('');
+        setPassword('');
+        setConfirmPassword('');
+      }
+    });
+  }
 
   return (
     <div className="signup">
@@ -27,37 +55,61 @@ export default function Signup() {
                 <div>
                   <input
                     type="text"
-                    name="First name"
+                    name="fName"
                     placeholder="First Name"
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
                   />
-                  <input type="text" name="Last name" placeholder="Last Name" />
+                  <input
+                    type="text"
+                    name="lName"
+                    placeholder="Last Name"
+                    onChange={(e) => setLastName(e.target.value)}
+                    required="true"
+                  />
                 </div>
               ) : (
-                <input type="text" name="Name" placeholder="Name" />
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
+                />
               )}
             </div>
           </div>
           <div className="form-element">
-            <input type="text" name="Enter email" placeholder="Email" />
-          </div>
-          <div className="form-element">
             <input
-              type="password"
-              name="Enter password"
-              placeholder="Create Password"
+              type="text"
+              name="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="form-element">
             <input
               type="password"
-              name="Re enter password"
+              name="password"
+              placeholder="Create Password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-element">
+            <input
+              type="password"
+              name="cnfPassword"
               placeholder="Confirm Password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
             />
           </div>
 
           <div className="form-element">
             <Link to="/ngo/Home">
-              <button>Submit</button>
+              <button onClick={submitSignUp}>Submit</button>
             </Link>
           </div>
         </form>

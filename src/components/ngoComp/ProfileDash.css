@@ -1,0 +1,95 @@
+.Dashboard {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url(../asset/images/bg.jpg);
+  height: 50%;
+}
+
+.Profile-Image {
+  padding: 0;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-holder {
+  margin-top: 80px;
+  margin: auto;
+  height: 100px;
+  width: 140px;
+  border-radius: 50%;
+}
+
+.img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.label {
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.ProfileName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  color: #fff;
+  cursor: default;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.ProfileDes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150vh;
+  color: #fff;
+  cursor: default;
+}
+
+#input[type='file'] {
+  display: none;
+}
+
+.Profile-Nav ul {
+  margin: 0;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.Profile-Nav li {
+  margin-left: 70px;
+  margin-right: 70px;
+  cursor: pointer;
+}
+
+.Profile-Nav li::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #161616;
+  margin-top: a0.5rem;
+  display: block;
+}
+
+.Profile-Nav li:hover::after {
+  width: 100%;
+  transition: width 0.3s linear;
+}
