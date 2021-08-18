@@ -44,6 +44,9 @@ export default function ProfileView() {
           </Link>
         </ul>
       </div>
+      {/* <div className="Reviews">
+        <h3>Reviews</h3>
+      </div> */}
     </>
   );
 }

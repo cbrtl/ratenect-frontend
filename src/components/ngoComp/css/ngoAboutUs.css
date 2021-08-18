@@ -1,0 +1,17 @@
+.profile {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 21.25%;
+}
+.name-container {
+  margin-left: 1%;
+  margin-top: 1%;
+  float: left;
+}
+.name-container p {
+  color: #6ab6a6;
+}
+
+.about-us-box .slider {
+  margin-left: 0px;
+}
