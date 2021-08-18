@@ -22,7 +22,6 @@ export default function Signup() {
     const data = { name, email, password, confirmPassword };
     const url = userForm ? '/api/usersignup' : '/api/ngosignup';
     axios.post(url, data).then((res) => {
-      console.log(res);
       if (res.status === 201) {
         setButtonPopup(false);
         setUserForm(false);
@@ -33,6 +32,7 @@ export default function Signup() {
         setPassword('');
         setConfirmPassword('');
       }
+      console.log(res);
     });
   }
 

@@ -27,9 +27,9 @@ export default function ProfileDash() {
                 id="input"
                 accept="image/*"
               />
-              <lable htmlFor="input" className="upload">
+              <label htmlFor="input" className="upload">
                 <Add color="white" fontSize="1.5em" cursor="pointer" />
-              </lable>
+              </label> 
             </div>
           </div>
           <div className="ProfileName">
