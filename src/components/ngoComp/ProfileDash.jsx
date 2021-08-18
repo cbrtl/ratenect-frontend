@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './ProfileDash.css';
+import { Link } from 'react-router-dom';
+import './css/ProfileDash.css';
 import { RiAddCircleFill as Add } from 'react-icons/ri';
 import Rating from '../home/starRating';
 
@@ -52,9 +53,24 @@ export default function ProfileDash() {
 
       <div className="Profile-Nav">
         <ul>
-          <li>Blog</li>
-          <li>Profile</li>
-          <li>Workspace</li>
+          <Link
+            to="/ngo/blog"
+            style={{ color: '#000', textDecoration: 'none' }}
+          >
+            <li>Blog</li>
+          </Link>
+          <Link
+            to="/ngo/profile"
+            style={{ color: '#000', textDecoration: 'none' }}
+          >
+            <li>Profile</li>
+          </Link>
+          <Link
+            to="/ngo/workspace"
+            style={{ color: '#000', textDecoration: 'none' }}
+          >
+            <li>Workspace</li>
+          </Link>
         </ul>
       </div>
     </>

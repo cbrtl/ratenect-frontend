@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-image: url(../asset/images/bg.jpg);
+  background-image: url(../../asset/images/bg.jpg);
   height: 50%;
 }
 
@@ -85,11 +85,11 @@
   width: 0;
   height: 3px;
   background: #161616;
-  margin-top: a0.5rem;
+  margin-top: 0.5rem;
   display: block;
 }
 
 .Profile-Nav li:hover::after {
   width: 100%;
-  transition: width 0.3s linear;
+  transition: 0.3s linear;
 }

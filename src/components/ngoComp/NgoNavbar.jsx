@@ -1,5 +1,5 @@
 import React from 'react';
-import './NgoNavbar.css';
+import './css/NgoNavbar.css';
 import { Link } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';
 

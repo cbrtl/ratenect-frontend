@@ -9,12 +9,8 @@ function Main() {
       <Link to="/" />
 
       <Switch>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route exact path="/ngo/home">
-          <NgoHome />
-        </Route>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/ngo/home" component={NgoHome} />
       </Switch>
     </Router>
   );

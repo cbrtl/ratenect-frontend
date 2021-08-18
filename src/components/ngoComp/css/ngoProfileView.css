@@ -1,0 +1,42 @@
+.Mission {
+  position: relative;
+  float: center;
+  width: 50%;
+}
+
+.Mission h3 {
+  margin-left: 10rem;
+}
+
+.Mission p {
+  margin-left: 7rem;
+}
+
+.View-Nav ul {
+  margin: 0;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.View-Nav li {
+  margin-left: 70px;
+  margin-right: 70px;
+  cursor: pointer;
+}
+
+.View-Nav li::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #161616;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.View-Nav li:hover::after {
+  width: 100%;
+  transition: 0.3s linear;
+}

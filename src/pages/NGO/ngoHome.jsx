@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../Homepage/homepage';
-import NgoProfileForm from './ngoProfileForm';
+import NgoProfile from './ngoProfile';
 import NgoNavbar from '../../components/ngoComp/NgoNavbar';
 import Footer from '../../components/home/footer';
 import Nearme from '../../components/home/nearme';
@@ -22,7 +22,7 @@ export default function NgoHome() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/ngo/home" exact component={Ngohome} />
-          <Route path="/ngo/profile" component={NgoProfileForm} />
+          <Route path="/ngo/profile" component={NgoProfile} />
         </Switch>
         <Footer />
       </div>
