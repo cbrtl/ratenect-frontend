@@ -40,3 +40,14 @@
   width: 100%;
   transition: 0.3s linear;
 }
+
+.Reviews {
+  position: relative;
+  float: center;
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+.Reviews h3 {
+  margin-left: 10rem;
+}

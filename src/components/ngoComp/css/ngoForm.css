@@ -6,6 +6,7 @@
   justify-content: 'center';
   align-items: 'center';
   padding: 100px 300px;
+  margin: auto;
 }
 .ngo-form-element input[type='text'],
 .ngo-form-element input[type='date'],
@@ -49,8 +50,6 @@
   float: left;
   margin-right: 45px;
   margin-bottom: 20px;
-  /* left: 243px;
-    top: 1829px; */
 }
 
 .ngo-form-element textarea {
@@ -101,4 +100,28 @@
 .ngo-form-element label {
   font-size: 18px;
   color: rgba(118, 107, 107, 1);
+}
+
+.upload-gallery button {
+  width: auto;
+  height: 45px;
+  left: 50%;
+  border-color: #52ab98;
+  border-bottom: #52ab98;
+  border-right: #52ab98;
+  font-size: 16px;
+  background: #52ab98;
+  color: #fff;
+  border-radius: 45px;
+  cursor: pointer;
+  /* left: 500px; */
+  text-align: center;
+  display: block;
+  margin-left: 0;
+  transition-duration: 0.4s;
+}
+
+.upload-gallery button:hover {
+  background: #2b6777;
+  border-color: #2b6777;
 }

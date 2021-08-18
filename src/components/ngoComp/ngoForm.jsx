@@ -107,7 +107,6 @@ export default function NgoForm() {
       </div>
       <div className="ngo-form-element">
         <label>URL</label>
-        <br />
         <input type="url" name="url" placeholder="Website link" />
       </div>
       <br />
@@ -121,7 +120,14 @@ export default function NgoForm() {
       <div className="ngo-form-element">
         <button>Save Changes!</button>
       </div>
-      <Slider />
+      <br />
+      <br />
+      <div className="gallery">
+        <div className="upload-gallery">
+          <button>upload</button>
+        </div>
+        <Slider />
+      </div>
     </form>
   );
 }
