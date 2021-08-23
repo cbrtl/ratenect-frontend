@@ -14,7 +14,6 @@ export default function Login() {
     const data = {email, password};
     console.log(data);
     const url = userForm ? '/api/userlogin' : '/api/ngologin';
-    console.log(url);
     axios.post(url, data).then(res => {
       if (res.status === 201) {
         setButtonPopup(false);
@@ -35,12 +34,12 @@ export default function Login() {
       </main>
 
       <Loginpopup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <form>
           <h2>Log in</h2>
           <div className="switch">
           <button onClick={() => setUserForm(false)}>NGO</button>
           <button onClick={() => setUserForm(true)}>User</button>
         </div>
+        <form>
           <div className="form-element">
             <input
              type="text" 
