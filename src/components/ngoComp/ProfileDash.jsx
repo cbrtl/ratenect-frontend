@@ -29,7 +29,7 @@ export default function ProfileDash() {
               />
               <label htmlFor="input" className="upload">
                 <Add color="white" fontSize="1.5em" cursor="pointer" />
-              </label> 
+              </label>
             </div>
           </div>
           <div className="ProfileName">

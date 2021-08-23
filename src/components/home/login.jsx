@@ -7,14 +7,14 @@ import Loginpopup from './loginpopup';
 export default function Login() {
   const [buttonPopup, setButtonPopup] = useState(false);
   const [userForm, setUserForm] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   function submitLogin() {
-    const data = {email, password};
+    const data = { email, password };
     console.log(data);
     const url = userForm ? '/api/userlogin' : '/api/ngologin';
-    axios.post(url, data).then(res => {
+    axios.post(url, data).then((res) => {
       if (res.status === 201) {
         setButtonPopup(false);
         setUserForm(false);
@@ -24,7 +24,7 @@ export default function Login() {
         setButtonPopup(true);
       }
       console.log(res);
-    })
+    });
   }
 
   return (
@@ -34,18 +34,18 @@ export default function Login() {
       </main>
 
       <Loginpopup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h2>Log in</h2>
-          <div className="switch">
+        <h2>Log in</h2>
+        <div className="switch">
           <button onClick={() => setUserForm(false)}>NGO</button>
           <button onClick={() => setUserForm(true)}>User</button>
         </div>
         <form>
           <div className="form-element">
             <input
-             type="text" 
-             name="email" 
-             placeholder="Email" 
-             onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              name="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="form-element">
