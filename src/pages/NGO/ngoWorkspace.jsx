@@ -1,4 +1,5 @@
 import React from 'react';
+import NgoEvent from './ngoEvent';
 
 export default function NgoWorkspace() {
   return (
@@ -10,7 +11,7 @@ export default function NgoWorkspace() {
         height: '70vh',
       }}
     >
-      <h3>Ngo Workspace Page</h3>
+      <NgoEvent/>
     </div>
   );
 }

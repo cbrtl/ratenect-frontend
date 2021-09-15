@@ -4,7 +4,8 @@ import Nav from '../../components/home/navbar';
 import IntroSlider from '../../components/home/introslides';
 import Search from '../../components/home/search';
 import Nearme from '../../components/home/nearme';
-import Recommend from '../../components/home/recommend';
+
+// import Recommend from '../../components/home/recommend';
 import Footer from '../../components/home/footer';
 import Vol from './volunteer';
 import Ngo from './ngo';
@@ -16,7 +17,8 @@ const Home = () => (
     <IntroSlider />
     <Search />
     <Nearme />
-    <Recommend />
+    {/* <Recommend /> */}
+   
   </div>
 );
 
