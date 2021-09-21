@@ -65,16 +65,7 @@ export default function NgoEvent() {
             />
           </FloatingLabel>
         </Form.Group>
-        {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalBody">
-                <Form.Label column sm={2}>
-                Incentives/Certificates(if any)
-                </Form.Label>
-                <Col sm={10}>
-                <FloatingLabel controlId="floatingTextarea2" label="Type your text" style={{color:'grey'}}>
-                    <Form.Control as="textarea" placeholder="Details of your event"  style={{height:'100px'}}/>
-                </FloatingLabel>
-                </Col>
-            </Form.Group> */}
+        
         <FloatingLabel
           controlId="floatingTextarea2"
           label="Incentives/Certificates(if any)"
