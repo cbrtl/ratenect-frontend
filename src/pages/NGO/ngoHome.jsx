@@ -6,6 +6,7 @@ import NgoNavbar from '../../components/ngoComp/NgoNavbar';
 import Footer from '../../components/home/footer';
 import Nearme from '../../components/home/nearme';
 import Recommend from '../../components/home/recommend';
+import NgoEvent from './ngoEvent';
 
 const Ngohome = () => (
   <div style={{ marginTop: '100px' }}>
@@ -23,6 +24,7 @@ export default function NgoHome() {
           <Route path="/" exact component={Home} />
           <Route path="/ngo/home" exact component={Ngohome} />
           <Route path="/ngo/profile" component={NgoProfile} />
+          <Route path="/ngo/event" component={NgoEvent} />
         </Switch>
         <Footer />
       </div>
