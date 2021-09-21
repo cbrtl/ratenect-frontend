@@ -11,7 +11,7 @@ export default function NgoWorkspace() {
         height: '70vh',
       }}
     >
-      <NgoEvent/>
+      <NgoEvent />
     </div>
   );
 }

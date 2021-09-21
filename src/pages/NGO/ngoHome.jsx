@@ -24,7 +24,7 @@ export default function NgoHome() {
           <Route path="/" exact component={Home} />
           <Route path="/ngo/home" exact component={Ngohome} />
           <Route path="/ngo/profile" component={NgoProfile} />
-          <Route path="/ngo/event" component={NgoEvent}/>
+          <Route path="/ngo/event" component={NgoEvent} />
         </Switch>
         <Footer />
       </div>

@@ -65,7 +65,7 @@ export default function NgoEvent() {
             />
           </FloatingLabel>
         </Form.Group>
-        
+
         <FloatingLabel
           controlId="floatingTextarea2"
           label="Incentives/Certificates(if any)"

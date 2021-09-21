@@ -18,7 +18,6 @@ const Home = () => (
     <Search />
     <Nearme />
     {/* <Recommend /> */}
-   
   </div>
 );
 
