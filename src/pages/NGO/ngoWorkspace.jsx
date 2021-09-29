@@ -1,4 +1,5 @@
 import React from 'react';
+import NgoEvent from './ngoEvent';
 
 const NgoWorkspace = () => (
   <div
@@ -9,7 +10,7 @@ const NgoWorkspace = () => (
       height: '70vh',
     }}
   >
-    <h3>Ngo Workspace Page</h3>
+   <NgoEvent />
   </div>
 );
 
