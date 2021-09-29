@@ -10,14 +10,13 @@ const NgoBlog = () => (
       height: '70vh',
     }}
   >
-   <div>
-        <Link to="/ngo/event">
-          {' '}
-          Start Writing, Share Experiences, Let the word spread{' '}
-        </Link>
-      </div>
+    <div>
+      <Link to="/ngo/event">
+        {' '}
+        Start Writing, Share Experiences, Let the word spread{' '}
+      </Link>
+    </div>
   </div>
 );
 
 export default NgoBlog;
-
