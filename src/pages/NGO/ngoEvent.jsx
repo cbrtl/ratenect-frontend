@@ -12,11 +12,9 @@ import {
 export default function NgoEvent() {
   return (
     <Container style={{ width: '70vw' }} className="p-5">
-      <Form >
+      <Form>
         <Form.Group as={Row} className="mb-3" controlId="formFile">
-          <Col sm={2}>
-            Image
-          </Col>
+          <Col sm={2}>Image</Col>
           <Col>
             <Form.Control type="file" />
           </Col>
@@ -55,7 +53,7 @@ export default function NgoEvent() {
         >
           |
           <Col sm={2}>
-            <Form.Label >Select Date</Form.Label>
+            <Form.Label>Select Date</Form.Label>
           </Col>
           <Col>
             <Form.Control type="date" name="dob" placeholder="Date of Birth" />
@@ -132,7 +130,7 @@ export default function NgoEvent() {
           </Col>
         </Row>
         <Row className="mt-4 p-3">
-          <Col  sm={2}>
+          <Col sm={2}>
             <Button variant="outline-success">Publish Now</Button>{' '}
           </Col>
           <Col sm={2}>
@@ -142,5 +140,4 @@ export default function NgoEvent() {
       </Form>
     </Container>
   );
-
 }
