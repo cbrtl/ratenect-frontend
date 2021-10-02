@@ -7,16 +7,14 @@ import {
   FloatingLabel,
   Button,
 } from 'react-bootstrap';
-import { ImAttachment } from 'react-icons/im';
+// import { ImAttachment } from 'react-icons/im';
 
 export default function NgoEvent() {
   return (
     <Container style={{ width: '70vw' }} className="p-5">
       <Form>
         <Form.Group as={Row} className="mb-3" controlId="formFile">
-          <Col>
-            <ImAttachment />
-          </Col>
+          <Col sm={2}>Image</Col>
           <Col>
             <Form.Control type="file" />
           </Col>
@@ -54,7 +52,7 @@ export default function NgoEvent() {
           controlId="formHorizontalDateVenue"
         >
           |
-          <Col>
+          <Col sm={2}>
             <Form.Label>Select Date</Form.Label>
           </Col>
           <Col>
@@ -131,11 +129,11 @@ export default function NgoEvent() {
             </FloatingLabel>
           </Col>
         </Row>
-        <Row className="g-2 p-3">
-          <Col className="ms-5">
+        <Row className="mt-4 p-3">
+          <Col sm={2}>
             <Button variant="outline-success">Publish Now</Button>{' '}
           </Col>
-          <Col className="m-auto">
+          <Col sm={2}>
             <Button variant="outline-success">Save as Draft</Button>{' '}
           </Col>
         </Row>
