@@ -24,29 +24,47 @@ export default function Signup() {
   const [userButtonStyle, setUserButtonStyle] = useState({
     backgroundColor: '#6db5c9',
   });
+  const [errorMsg, setErrorMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
 
   const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setErrorMsg('');
+    setSuccessMsg('');
+  };
 
   function submitSignUp(e) {
+    setErrorMsg('');
+    setSuccessMsg('');
     e.preventDefault();
-    const name = userForm ? firstName + ' ' + lastName : fullName;
-    const data = { name, email, password, confirmPassword };
-    const url = userForm ? '/api/usersignup' : '/api/ngosignup';
-    axios.post(url, data).then((res) => {
-      if (res.status === 201) {
-        // setButtonPopup(false);
-        setUserForm(false);
-        setFirstName('');
-        setLastName('');
-        setFullName('');
-        setEmail('');
-        setPassword('');
-        setConfirmPassword('');
-      }
-      console.log(res);
-      handleClose();
-    });
+    if (password === confirmPassword) {
+      const name = userForm ? firstName + ' ' + lastName : fullName;
+      const data = { name, email, password };
+      const url = userForm ? '/api/usersignup' : '/api/ngosignup';
+      axios
+        .post(url, data)
+        .then((res) => {
+          if (res.status === 201) {
+            setUserForm(false);
+            setFirstName('');
+            setLastName('');
+            setFullName('');
+            setEmail('');
+            setPassword('');
+            setConfirmPassword('');
+            console.log(res);
+            setSuccessMsg('Account created successfully. Now you can Log in.');
+          } else {
+            setErrorMsg(res.message);
+          }
+        })
+        .catch((error) => {
+          setErrorMsg(error.message);
+        });
+    } else {
+      setErrorMsg('Passwords do not match');
+    }
   }
 
   function toggleUser(flag) {
@@ -86,7 +104,12 @@ export default function Signup() {
             User
           </button>
         </div>
-
+        <div className="successMsg">
+          <p style={{ color: 'green' }}>{successMsg}</p>
+        </div>
+        <div className="errorMsg">
+          <p style={{ color: 'red' }}>{errorMsg}</p>
+        </div>
         <Form onSubmit={submitSignUp}>
           <div className="form-element">
             <div className="first-element">
@@ -97,12 +120,14 @@ export default function Signup() {
                     name="fName"
                     placeholder="First Name"
                     onChange={(e) => setFirstName(e.target.value)}
+                    value={firstName}
                   />
                   <Input
                     type="text"
                     name="lName"
                     placeholder="Last Name"
                     onChange={(e) => setLastName(e.target.value)}
+                    value={lastName}
                   />
                 </div>
               ) : (
@@ -111,16 +136,18 @@ export default function Signup() {
                   name="fullName"
                   placeholder="Full Name"
                   onChange={(e) => setFullName(e.target.value)}
+                  value={fullName}
                 />
               )}
             </div>
           </div>
           <div className="form-element">
             <Input
-              type="text"
+              type="email"
               name="email"
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
           </div>
           <div className="form-element">
@@ -129,6 +156,7 @@ export default function Signup() {
               name="password"
               placeholder="Create Password"
               onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
           </div>
           <div className="form-element">
@@ -137,6 +165,7 @@ export default function Signup() {
               name="cnfPassword"
               placeholder="Confirm Password"
               onChange={(e) => setConfirmPassword(e.target.value)}
+              value={confirmPassword}
             />
           </div>
           <Button type="submit" variant="primary">
@@ -151,82 +180,3 @@ export default function Signup() {
     </div>
   );
 }
-
-/* <div className="signup">
-      <main>
-        <button onClick={() => setButtonPopup(true)}>Sign Up</button>
-      </main>
-
-      <Signuppopup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h2>Sign Up</h2>
-        <div className="switch">
-          <button onClick={() => setUserForm(false)}>NGO</button>
-          <button onClick={() => setUserForm(true)}>User</button>
-        </div>
-        <form>
-          <div className="form-element">
-            <div className="first-element">
-              {userForm ? (
-                <div>
-                  <input
-                    type="text"
-                    name="fName"
-                    placeholder="First Name"
-                    onChange={(e) => setFirstName(e.target.value)}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="lName"
-                    placeholder="Last Name"
-                    onChange={(e) => setLastName(e.target.value)}
-                    required="true"
-                  />
-                </div>
-              ) : (
-                <input
-                  type="text"
-                  name="fullName"
-                  placeholder="Full Name"
-                  onChange={(e) => setFullName(e.target.value)}
-                  required
-                />
-              )}
-            </div>
-          </div>
-          <div className="form-element">
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-element">
-            <input
-              type="password"
-              name="password"
-              placeholder="Create Password"
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-element">
-            <input
-              type="password"
-              name="cnfPassword"
-              placeholder="Confirm Password"
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className="form-element">
-            <Link to="/ngo/Home">
-              <button onClick={submitSignUp}>Submit</button>
-            </Link>
-          </div>
-        </form>
-      </Signuppopup>
-    </div> */

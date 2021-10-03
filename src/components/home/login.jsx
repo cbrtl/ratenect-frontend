@@ -16,27 +16,37 @@ export default function Login() {
   const [userButtonStyle, setUserButtonStyle] = useState({
     backgroundColor: '#6db5c9',
   });
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setErrorMsg('');
+  };
 
   function submitLogin(e) {
+    setErrorMsg('');
     e.preventDefault();
     const data = { email, password };
     console.log(data);
     const url = userForm ? '/api/userlogin' : '/api/ngologin';
-    axios.post(url, data).then((res) => {
-      if (res.status === 200) {
-        // setButtonPopup(false);
-        setUserForm(false);
-        setShow(false);
-        setEmail('');
-        setPassword('');
-      } else {
-        // setButtonPopup(true);
-      }
-      console.log(res);
-    });
+    axios
+      .post(url, data)
+      .then((res) => {
+        if (res.status === 200) {
+          setUserForm(false);
+          setShow(false);
+          setEmail('');
+          setPassword('');
+        } else {
+          setErrorMsg(res.message);
+        }
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error);
+        setErrorMsg('Authentication failed');
+      });
   }
 
   function toggleUser(flag) {
@@ -76,14 +86,17 @@ export default function Login() {
             User
           </button>
         </div>
-
+        <div className="errorMsg">
+          <p style={{ color: 'red' }}>{errorMsg}</p>
+        </div>
         <Form onSubmit={submitLogin}>
           <div className="form-element">
             <Input
-              type="text"
+              type="email"
               name="email"
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
           </div>
           <div className="form-element">
@@ -92,6 +105,7 @@ export default function Login() {
               name="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
           </div>
           <Button type="submit" variant="primary">
