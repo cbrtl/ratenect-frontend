@@ -1,12 +1,13 @@
 import { React, useState } from 'react';
-// import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
+import Input from '../UI/components/Input';
 import './css/signup.css';
-import Signuppopup from './signuppopup';
+// import Signuppopup from './signuppopup';
+import NewModal from './modal';
 
 export default function Signup() {
-  const [buttonPopup, setButtonPopup] = useState(false);
+  // const [buttonPopup, setButtonPopup] = useState(false);
   const [userForm, setUserForm] = useState(false);
 
   // STATES OF INPUT FIELDS
@@ -16,14 +17,25 @@ export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [show, setShow] = useState(false);
+  const [ngoButtonStyle, setNgoButtonStyle] = useState({
+    backgroundColor: '#2b6777',
+  });
+  const [userButtonStyle, setUserButtonStyle] = useState({
+    backgroundColor: '#6db5c9',
+  });
 
-  function submitSignUp() {
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  function submitSignUp(e) {
+    e.preventDefault();
     const name = userForm ? firstName + ' ' + lastName : fullName;
     const data = { name, email, password, confirmPassword };
     const url = userForm ? '/api/usersignup' : '/api/ngosignup';
     axios.post(url, data).then((res) => {
       if (res.status === 201) {
-        setButtonPopup(false);
+        // setButtonPopup(false);
         setUserForm(false);
         setFirstName('');
         setLastName('');
@@ -33,11 +45,114 @@ export default function Signup() {
         setConfirmPassword('');
       }
       console.log(res);
+      handleClose();
     });
+  }
+
+  function toggleUser(flag) {
+    if (flag) {
+      setUserForm(true);
+      setUserButtonStyle({ backgroundColor: '#2b6777' });
+      setNgoButtonStyle({ backgroundColor: '#6db5c9' });
+    } else {
+      setUserForm(false);
+      setUserButtonStyle({ backgroundColor: '#6db5c9' });
+      setNgoButtonStyle({ backgroundColor: '#2b6777' });
+    }
   }
 
   return (
     <div className="signup">
+      <main>
+        <button onClick={handleShow}>Sign Up</button>
+      </main>
+      <NewModal
+        modalTitle={userForm ? ' User Sign Up' : 'NGO Sign Up'}
+        show={show}
+        handleClose={handleClose}
+      >
+        <div
+          className="switch"
+          style={{
+            textAlign: 'center',
+            transform: 'translateX(25%)',
+            paddingBottom: '65px',
+          }}
+        >
+          <button style={ngoButtonStyle} onClick={() => toggleUser(false)}>
+            NGO
+          </button>
+          <button style={userButtonStyle} onClick={() => toggleUser(true)}>
+            User
+          </button>
+        </div>
+
+        <Form onSubmit={submitSignUp}>
+          <div className="form-element">
+            <div className="first-element">
+              {userForm ? (
+                <div>
+                  <Input
+                    type="text"
+                    name="fName"
+                    placeholder="First Name"
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                  <Input
+                    type="text"
+                    name="lName"
+                    placeholder="Last Name"
+                    onChange={(e) => setLastName(e.target.value)}
+                  />
+                </div>
+              ) : (
+                <Input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  onChange={(e) => setFullName(e.target.value)}
+                />
+              )}
+            </div>
+          </div>
+          <div className="form-element">
+            <Input
+              type="text"
+              name="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="form-element">
+            <Input
+              type="password"
+              name="password"
+              placeholder="Create Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="form-element">
+            <Input
+              type="password"
+              name="cnfPassword"
+              placeholder="Confirm Password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+          <Button type="submit" variant="primary">
+            Sign Up
+          </Button>
+          &nbsp;&nbsp;
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
+        </Form>
+      </NewModal>
+    </div>
+  );
+}
+
+/* <div className="signup">
       <main>
         <button onClick={() => setButtonPopup(true)}>Sign Up</button>
       </main>
@@ -114,6 +229,4 @@ export default function Signup() {
           </div>
         </form>
       </Signuppopup>
-    </div>
-  );
-}
+    </div> */

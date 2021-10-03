@@ -1,47 +1,85 @@
 import React, { useState } from 'react';
-// import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
 import './css/login.css';
-import Loginpopup from './loginpopup';
+import { Form, Button } from 'react-bootstrap';
+import Input from '../UI/components/Input';
+import NewModal from './modal';
 
 export default function Login() {
-  const [buttonPopup, setButtonPopup] = useState(false);
   const [userForm, setUserForm] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [show, setShow] = useState(false);
+  const [ngoButtonStyle, setNgoButtonStyle] = useState({
+    backgroundColor: '#2b6777',
+  });
+  const [userButtonStyle, setUserButtonStyle] = useState({
+    backgroundColor: '#6db5c9',
+  });
 
-  function submitLogin() {
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  function submitLogin(e) {
+    e.preventDefault();
     const data = { email, password };
     console.log(data);
     const url = userForm ? '/api/userlogin' : '/api/ngologin';
     axios.post(url, data).then((res) => {
-      if (res.status === 201) {
-        setButtonPopup(false);
+      if (res.status === 200) {
+        // setButtonPopup(false);
         setUserForm(false);
+        setShow(false);
         setEmail('');
         setPassword('');
       } else {
-        setButtonPopup(true);
+        // setButtonPopup(true);
       }
       console.log(res);
     });
   }
 
+  function toggleUser(flag) {
+    if (flag) {
+      setUserForm(true);
+      setUserButtonStyle({ backgroundColor: '#2b6777' });
+      setNgoButtonStyle({ backgroundColor: '#6db5c9' });
+    } else {
+      setUserForm(false);
+      setUserButtonStyle({ backgroundColor: '#6db5c9' });
+      setNgoButtonStyle({ backgroundColor: '#2b6777' });
+    }
+  }
+
   return (
     <div className="login">
       <main>
-        <button onClick={() => setButtonPopup(true)}>Login</button>
+        <button onClick={handleShow}>Login</button>
       </main>
-
-      <Loginpopup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h2>Log in</h2>
-        <div className="switch">
-          <button onClick={() => setUserForm(false)}>NGO</button>
-          <button onClick={() => setUserForm(true)}>User</button>
+      <NewModal
+        modalTitle={userForm ? ' User Log In' : 'NGO Log In'}
+        show={show}
+        handleClose={handleClose}
+      >
+        <div
+          className="switch"
+          style={{
+            textAlign: 'center',
+            transform: 'translateX(25%)',
+            paddingBottom: '65px',
+          }}
+        >
+          <button style={ngoButtonStyle} onClick={() => toggleUser(false)}>
+            NGO
+          </button>
+          <button style={userButtonStyle} onClick={() => toggleUser(true)}>
+            User
+          </button>
         </div>
-        <form>
+
+        <Form onSubmit={submitLogin}>
           <div className="form-element">
-            <input
+            <Input
               type="text"
               name="email"
               placeholder="Email"
@@ -49,25 +87,22 @@ export default function Login() {
             />
           </div>
           <div className="form-element">
-            <input
+            <Input
               type="password"
               name="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="form-element">
-            <input type="checkbox" />
-            <label>Remember me</label>
-          </div>
-          <div className="form-element">
-            <button onClick={submitLogin}>Get Started!</button>
-          </div>
-          <div className="form-element">
-            <a href="/">Forgot password?</a> {/* Link will be changed */}
-          </div>
-        </form>
-      </Loginpopup>
+          <Button type="submit" variant="primary">
+            Log In
+          </Button>
+          &nbsp;&nbsp;
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
+        </Form>
+      </NewModal>
     </div>
   );
 }

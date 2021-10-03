@@ -1,0 +1,11 @@
+.custom {
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 18.5px;
+  font: size 14px;
+  color: #fff;
+  border-style: unset;
+}
