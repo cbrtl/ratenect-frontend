@@ -1,7 +1,6 @@
 .Mission {
   position: relative;
-  float: center;
-  width: 50%;
+  display: flex;
 }
 
 .Mission h3 {
@@ -10,6 +9,10 @@
 
 .Mission p {
   margin-left: 7rem;
+}
+
+.edit-btn {
+  float: right;
 }
 
 .View-Nav ul {
