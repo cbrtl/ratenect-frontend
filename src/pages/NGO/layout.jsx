@@ -1,8 +1,8 @@
 import React from 'react';
 import NgoNavbar from '../../components/ngoComp/NgoNavbar';
-import EditBtn from '../../components/ngoComp/editBtn';
 import Dashboard from '../../components/ngoComp/ProfileDash';
 import Footer from '../../components/home/footer';
+import ProfileView from '../../components/ngoComp/ngoProfileView';
 
 const NgoPageLayout = ({ children }) => (
   <>
@@ -12,13 +12,18 @@ const NgoPageLayout = ({ children }) => (
   </>
 );
 
-export const NgoProfileLayout = ({ children }) => (
+export const NgoProfileViewLayout = ({ children }) => (
   <NgoPageLayout>
-    <div style={{ marginTop: '50px' }}>
-      <EditBtn />
-    </div>
+    <Dashboard />
     {children}
   </NgoPageLayout>
+);
+
+export const NgoDetailedProfileLayout = ({ children }) => (
+  <NgoProfileViewLayout>
+    <ProfileView />
+    {children}
+  </NgoProfileViewLayout>
 );
 
 export const NgoProfileFormLayout = ({ children }) => (
