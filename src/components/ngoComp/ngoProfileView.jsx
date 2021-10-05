@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/ngoProfileView.css';
+import EditBtn from './editBtn';
 
 export default function ProfileView() {
   return (
@@ -15,6 +16,9 @@ export default function ProfileView() {
           five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
         </p>
+        <div className="edit-btn" style={{ marginTop: '50px' }}>
+          <EditBtn />
+        </div>
       </div>
       <div className="View-Nav">
         <ul>

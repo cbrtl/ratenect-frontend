@@ -8,7 +8,8 @@ import Vol from './pages/Homepage/volunteer';
 import Ngohome from './pages/NGO/ngoHome';
 import NgoPageLayout, {
   NgoProfileFormLayout,
-  NgoProfileLayout,
+  NgoProfileViewLayout,
+  NgoDetailedProfileLayout,
 } from './pages/NGO/layout';
 import HomePageLayout from './pages/Homepage/layout';
 
@@ -65,25 +66,25 @@ function Main() {
           exact
           path="/ngo/profile/aboutUs"
           component={NgoAboutUs}
-          layout={NgoProfileLayout}
+          layout={NgoDetailedProfileLayout}
         />
         <RouteWithLayout
           exact
           path="/ngo/profile/blog"
           component={NgoBlogComp}
-          layout={NgoProfileLayout}
+          layout={NgoDetailedProfileLayout}
         />
         <RouteWithLayout
           exact
           path="/ngo/profile/gallery"
           component={NgoGallery}
-          layout={NgoProfileLayout}
+          layout={NgoDetailedProfileLayout}
         />
         <RouteWithLayout
           exact
           path="/ngo/profile/contactUs"
           component={NgoContactUs}
-          layout={NgoProfileLayout}
+          layout={NgoDetailedProfileLayout}
         />
         <RouteWithLayout
           exact
@@ -95,7 +96,7 @@ function Main() {
           exact
           path="/ngo/profile"
           component={NgoProfile}
-          layout={NgoProfileFormLayout}
+          layout={NgoProfileViewLayout}
         />
         <RouteWithLayout
           exact
