@@ -1,17 +1,37 @@
-import React from 'react';
-import NgoEvent from './ngoEvent';
+import React, { useState } from 'react';
+import { Row, Col, Button } from 'react-bootstrap';
+import NgoEventModal from './ngoEvent';
 
-const NgoWorkspace = () => (
-  <div
-  // style={{
-  //   display: 'flex',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   height: '70vh',
-  // }}
-  >
-    <NgoEvent />
-  </div>
-);
+const NgoWorkspace = () => {
+  const [showAddModal, setShowAddModal] = useState('');
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      <Row style={{ margin: '20px' }}>
+        <Col>
+          <Button
+            variant="success"
+            onClick={() => {
+              setShowAddModal(true);
+            }}
+          >
+            Create a New Campaign
+          </Button>
+        </Col>
+      </Row>
+      <NgoEventModal
+        show={showAddModal}
+        handleClose={() => {
+          setShowAddModal(false);
+        }}
+      />
+    </div>
+  );
+};
 
 export default NgoWorkspace;
