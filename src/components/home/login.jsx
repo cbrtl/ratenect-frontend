@@ -34,6 +34,10 @@ export default function Login() {
       .post(url, data)
       .then((res) => {
         if (res.status === 200) {
+          window.localStorage.setItem(
+            'loggedInUser',
+            JSON.stringify(res.data.user)
+          );
           setUserForm(false);
           setShow(false);
           setEmail('');
@@ -41,7 +45,7 @@ export default function Login() {
         } else {
           setErrorMsg(res.message);
         }
-        console.log(res);
+        console.log(res.data.user);
       })
       .catch((error) => {
         console.log(error);
