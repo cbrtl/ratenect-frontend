@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import './css/starRating.css';
@@ -12,7 +13,7 @@ const Rating = () => {
         const ratingValue = i + 1;
 
         return (
-          <label>
+          <label key={i}>
             <input
               type="radio"
               name="rating"
@@ -20,7 +21,7 @@ const Rating = () => {
               onClick={() => setRating(ratingValue)}
             />
             <FaStar
-              classname="star"
+              className="star"
               cursor="pointer"
               color={ratingValue <= (hover || rating) ? '#ffc107' : '#e4e5e9'}
               size={20}
