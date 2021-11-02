@@ -1,9 +1,19 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/no-this-in-sfc */
 import React from 'react';
+import axios from 'axios';
 import './css/NgoNavbar.css';
 import { Link } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';
 
 export default function Nav() {
+  const logout = () => {
+    axios.get('http://localhost:5000/logout').then(() => {
+      window.localStorage.clear();
+      // Redirect to Home Page
+    });
+  };
+
   return (
     <header>
       <Link to="/ngo/home" style={{ color: '#000', textDecoration: 'none' }}>
@@ -36,9 +46,9 @@ export default function Nav() {
           >
             <CgProfile size={30} />
           </Link>
-          <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>
-            <button>Logout</button>
-          </Link>
+          {/* <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}> */}
+          <button onClick={logout}>Logout</button>
+          {/* </Link> */}
         </ul>
       </nav>
       <label htmlFor="nav-toggle" className="nav-toggle-label" />
