@@ -1,19 +1,26 @@
 .ngo-form {
+  width: 100%;
   position: relative;
   align-self: center;
   align-content: center;
   display: 'flex';
   justify-content: 'center';
   align-items: 'center';
-  padding: 100px 300px;
+  padding: 50px 200px;
   margin: auto;
 }
+
+.ngo-form-element {
+  margin: 25px;
+}
+
 .ngo-form-element input[type='text'],
+.ngo-form-element input[type='email'],
 .ngo-form-element input[type='date'],
 .ngo-form-element input[type='number'],
 .ngo-form-element input[type='url'],
 .ngo-form-element input[type='password'] {
-  margin: 5px;
+  margin: 5px 15px;
   width: 400px;
   padding: 10px;
   outline: none;
