@@ -9,6 +9,8 @@ export default function ProfileDash() {
     'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
   );
 
+  const user = JSON.parse(window.localStorage.getItem('loggedInUser'));
+
   return (
     <>
       <div className="Dashboard">
@@ -33,7 +35,7 @@ export default function ProfileDash() {
             </div>
           </div>
           <div className="ProfileName">
-            <h2>GO GREEN FOUNDATION</h2>
+            <h2>{user ? user.name : 'Anonymous'}</h2>
           </div>
           <div className="Star">
             <Rating style={{ alignItems: 'center' }} />

@@ -23,6 +23,7 @@
     "import/no-extraneous-dependencies": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "import/no-named-as-default": "off",
-    "prefer-template": "off"
+    "prefer-template": "off",
+    "react/no-array/index-key": "off"
   }
 }
