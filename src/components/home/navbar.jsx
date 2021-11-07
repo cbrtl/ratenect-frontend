@@ -1,10 +1,18 @@
 import React from 'react';
 import './css/navbar.css';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import Login from './login';
 import Signup from './signup';
 
 export default function Nav() {
+  const history = useHistory();
+  const loggedIn = localStorage.getItem('loggedInUser');
+  console.log(loggedIn);
+
+  const ngoLogout = () => {
+    localStorage.removeItem('loggedInUser');
+    history.push('/');
+  };
   return (
     <header>
       <Link to="/" style={{ color: '#000', textDecoration: 'none' }}>
@@ -37,8 +45,16 @@ export default function Nav() {
           <Link to='/user-signup' style={{ color: '#fff', textDecoration: 'none' }}>
             <li className='signup'>SIGN UP</li>
           </Link> */}
-          <Login />
-          <Signup />
+          {loggedIn == null ? (
+            <>
+              <Login />
+              <Signup />
+            </>
+          ) : (
+            <>
+              <button onClick={ngoLogout}>Logout</button>
+            </>
+          )}
         </ul>
       </nav>
       <label htmlFor="nav-toggle" className="nav-toggle-label" />

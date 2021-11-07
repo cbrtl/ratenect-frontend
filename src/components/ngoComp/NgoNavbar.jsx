@@ -3,14 +3,19 @@
 import React from 'react';
 import axios from 'axios';
 import './css/NgoNavbar.css';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';
 
 export default function Nav() {
+  const history = useHistory();
+  const loggedIn = localStorage.getItem('loggedInUser');
+  console.log(loggedIn);
+
   const logout = () => {
     axios.get('http://localhost:5000/logout').then(() => {
       window.localStorage.clear();
       // Redirect to Home Page
+      history.push('/');
     });
   };
 
@@ -19,10 +24,16 @@ export default function Nav() {
       <Link to="/ngo/home" style={{ color: '#000', textDecoration: 'none' }}>
         <h3 className="logo">LOGO</h3>
       </Link>
-      <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+      {/* <input type="checkbox" id="nav-toggle" className="nav-toggle" /> */}
       <nav>
         <ul>
           <Link
+            to="/ngo/workspace"
+            style={{ color: '#000', textDecoration: 'none' }}
+          >
+            <li>Workspace</li>
+          </Link>
+          {/* <Link
             to="/volunteer"
             style={{ color: '#fff', textDecoration: 'none' }}
           >
@@ -39,7 +50,7 @@ export default function Nav() {
             style={{ color: '#fff', textDecoration: 'none' }}
           >
             <li>DONATION</li>
-          </Link>
+          </Link> */}
           <Link
             to="/ngo/profile"
             style={{ color: '#fff', textDecoration: 'none' }}

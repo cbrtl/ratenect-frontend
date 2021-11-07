@@ -54,7 +54,7 @@ function Main() {
           exact
           path="/ngo"
           component={Ngo}
-          layout={HomePageLayout}
+          layout={NgoPageLayout}
         />
         <RouteWithLayout
           exact
