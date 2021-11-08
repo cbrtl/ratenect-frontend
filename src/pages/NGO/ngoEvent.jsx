@@ -79,6 +79,9 @@ export default function NgoEventModal(props) {
         .post(`/api/createCampaign`, newCampaign)
         .then((res) => {
           console.log(res);
+          axios.get('/api/getNgoCampaignDetails').then((response) => {
+            props.updateCampaigns(response.data.campaigns);
+          });
         })
         .catch((err) => {
           console.log(err);
