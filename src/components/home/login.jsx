@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import './css/login.css';
 import { Form, Button } from 'react-bootstrap';
@@ -6,6 +7,7 @@ import Input from '../UI/components/Input';
 import NewModal from './modal';
 
 export default function Login() {
+  const history = useHistory();
   const [userForm, setUserForm] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -38,6 +40,7 @@ export default function Login() {
             'loggedInUser',
             JSON.stringify(res.data.user)
           );
+          history.push('/ngo');
           setUserForm(false);
           setShow(false);
           setEmail('');
