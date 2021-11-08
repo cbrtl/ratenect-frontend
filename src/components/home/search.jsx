@@ -56,8 +56,8 @@ export default function Search() {
               <input
                 type="text"
                 className="form-control"
-                id="search"
-                placeholder="search"
+                id="search"s
+                placeholder="Search"
               />
             </div>
           </form>
@@ -67,22 +67,22 @@ export default function Search() {
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
           {' '}
-          Search{' '}
+          Education{' '}
         </button>
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
           {' '}
-          h{' '}
+          Youth{' '}
         </button>
 
         <button type="button" className="btn  btn-outline-dark col-2 m-1">
           {' '}
-          hiii{' '}
+          Health{' '}
         </button>
 
         <button type="button" className="btn btn-outline-dark col-2 m-1">
           {' '}
-          Search{' '}
+          Environment{' '}
         </button>
       </div>
     </div>
