@@ -116,6 +116,12 @@ nav li:hover {
   cursor: pointer;
 }
 
+header img {
+  width: 185px;
+  height: 75px;
+  transform: translateX(-60%);
+}
+
 /* webview */
 
 @media screen and (min-width: 700px) {
