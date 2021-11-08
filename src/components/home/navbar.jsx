@@ -8,7 +8,8 @@ export default function Nav() {
   return (
     <header>
       <Link to="/" style={{ color: '#000', textDecoration: 'none' }}>
-        <h3 className="logo">LOGO</h3>
+        <img src="https://i.ibb.co/d6BxB9j/ratenect-logo.png" alt="logo" />
+        {/* <h3 className="logo">LOGO</h3> */}
       </Link>
       <input type="checkbox" id="nav-toggle" className="nav-toggle" />
       <nav>
