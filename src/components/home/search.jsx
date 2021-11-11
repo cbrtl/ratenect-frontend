@@ -56,7 +56,8 @@ export default function Search() {
               <input
                 type="text"
                 className="form-control"
-                id="search"s
+                id="search"
+                s
                 placeholder="Search"
               />
             </div>

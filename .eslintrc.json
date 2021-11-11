@@ -24,6 +24,7 @@
     "jsx-a11y/click-events-have-key-events": "off",
     "import/no-named-as-default": "off",
     "prefer-template": "off",
-    "react/no-array/index-key": "off"
+    "react/no-array/index-key": "off",
+    "arrow-body-style": "off"
   }
 }
